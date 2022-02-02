@@ -37,7 +37,6 @@ The following are great hubs to search for a paper with code.
 
 * [Papers with Code SOTA](https://paperswithcode.com/sota)
 * [Kaggle Datasets](https://www.kaggle.com/datasets)
-* [Made with ML](https://madewithml.com/)
 
 ### 2. Problem Domain
 
