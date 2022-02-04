@@ -1,31 +1,31 @@
 # Project Proposal
 
-Perhaps the most important delivery since all your term work depends on it. You are required to submit a **quality-document** containing the following requirements.
+Perhaps the most important delivery since all your project work depends on it. You are required to submit a **quality-document** containing the following requirements.
 
 ## Proposal Document Requirements
 
 1. The proposed problem statement and its motivation. Use figures and plots to explan your problem statement.
 2. Input/Output examples that explain the problem statement, also use figures and plots to illustrates those examples.
-3. A survey of available evaluation metrics and tools for this problem.
-4. Current state of the art results (results of correct evaluation metrics, for example accuracy in some class classification problems) for the proposed problem.
-5. A survey of available datasets for your course project problem. If your proposed problem is a reinforcement learning problem, then provide a survey of available environments that your model can work on. This survey should include, examples of the dataset (In figures if possible, I want to see an input and an output), a website link for the dataset, the dataset storage size (in MBs or GBs), the dataset examples size (number of examples in training/validation/testing splits), and any other important information.
-6. A detailed description of the dataset (or environment for reinforcement learning) to be used. Also mention why will you use this particular dataset.
-7. The selected dataset shouldn't exceed 20 GB (requirement, but 15GB recommended), if otherwise, please explain why do you find using this dataset is feasible.
-8. A survey of available models and solutions for the proposed problem. This survey should include, figures and plots to explain each model, reference paper for each model, public repository code link, information about frameworks used in the code, information about available weights and model zoo, information about training resources required for them if available, results of each model and comparison between them in a table, and any other important information.
+3. A survey of available evaluation metrics and tools for this problem. Metrics could be accuracy, area under the curve etc.
+4. Current state of the art results (**results of correct evaluation metrics**, for example accuracy in some class classification problems) for the proposed problem.
+5. A survey of available datasets for your course project problem. If your proposed problem is a reinforcement learning problem, then provide a survey of available environments that your model can work on. This survey should include, examples of the dataset (In figures if possible, I want to see an input and an output), **a website link for the dataset** (make sure that the dataset is accessible directly from this link, otherwise you may get stuck later when you decide to use it), the dataset storage size (in MBs or GBs), the dataset examples size (number of examples in training/validation/testing splits) if splits sizes are defined, and any other important information.
+6. A detailed description of the dataset (or environment for reinforcement learning) to be used. Also mention **why will you use this particular dataset**.
+7. The selected dataset shouldn't exceed 20 GB (but 15GB recommended), if otherwise, please explain why do you find using this dataset feasible.
+8. A survey of available models and solutions for the proposed problem. This survey should include, figures and plots to explain each model, reference paper for each model, public repository code link, information about frameworks used in the code, information about available weights and model zoo, information about training resources required for them **if available**, results of each model and comparison between them in a table, and any other important information.
 9. A detailed description of the model to be used from literature to build on. Also mention why you will use this particular model.
-10. The source code URL for the selected baseline model. It should be written in a recent framework, as Tensorflow 2.x or TF.Keras or PyTorch and in few files (20 code files or less). If there's no available source code, or the source code doesn't use the mentioned frameworks, please jusitfy how will you approach your project without them.
-11. The model weights or model zoo URL. If there're no model weights, please jusitfy how will you approach your project without them.
-12. The proposed updates to the literature model. Also mention what benefit do you expect from this update and why you think it is a good idea to try it.
-13. Write in details about how you will evaluate your results, what kind of evaluation metric you will use to compare your results, and what types of plots/graphs will be used to point out the comparison results.
-14. **Your graduation project (or thesis) brief problem statement, even if it is not the same as the proposed course problem statement.**
-15. **If your proposal is related to your graduation project (or thesis), point out the differences that will be made between this problem statement and your graduation project (thesis) problem statement.**
-16. List all other machien learning, deep learning, computer vision, natural language processing, pattern recognition or any related data science field project you have particiapted in, especially if you think they're close to your problem statement. 
+10. The source code URL for the selected baseline model. It should be written in a recent framework, as Tensorflow 2.x or TF.Keras or PyTorch and in few files (20 code files or less). If there's no available source code, or the source code doesn't use the mentioned frameworks, **please jusitfy how will you approach your project without them**.
+11. The model weights or model zoo URL. If there're no model weights, **please jusitfy how will you approach your project without them**.
+12. The proposed updates to the literature model. Also mention **what benefit do you expect from this update and why you think it is a good idea to try it**.
+13. Write in details about how you will evaluate your results, what kind of evaluation metric you will use to compare your results, and what types of **plots/graphs** (show us in figures histograms, line graphs, confusion matrices etc. depending on your problem) will be used to point out the comparison results.
+14. **Your graduation project (or thesis) brief problem statement (if you are working on it this semester), even if it is not the same as the proposed course problem statement.**
+15. **If your proposal is related to your graduation project (or thesis), point out the differences that will be made between this problem statement and your graduation project (thesis) problem statement (regarding either the problem itself or the proposed updates)**
+16. List all other machien learning, deep learning, computer vision, natural language processing, pattern recognition or any related data science field project you have particiapted in, **especially if you think they're close to your problem statement**. 
 17. Mention all available online resources/papers you will collect during the survey.
 18. Each team member contribution. You should state only the contribution in the technical work, so writing the document for example shouldn't be included.
 
 ## Deliverables
 
-1. A quality-document containing the requirements.
+1. A quality-document (PDF) containing the requirements.
 
 ## Guidelines for choosing the problem
 
@@ -57,6 +57,7 @@ You need to ask your self the following questions:
 3. Can I train the model on other cloud service?
 
 If you have an access to credit card, then [this tutorial: 'Using Azure Free 200$ Credit for Deep Learning'](https://youtu.be/EFVU8EnibXw) might be beneficial to you.
+You can make use of the Google Cloud Credit.
 
 ## Selected Proposals
 
@@ -76,9 +77,9 @@ The following are selected proposals from past years, I highly recommend you to 
 
 ### 1. What happens next?
 
-I will review your proposal and check that it meets each individual specified requirement and whether accept, accept with updates or reject it.
+I will review your proposal and check that it meets each individual specified requirement and whether **accept, accept with updates or reject it**.
 
-The proposal update phase will be used to update the proposal incase of rejection or updates request.
+The proposal update phase will be used to **update the proposal incase of rejection or updates request**.
 
 ### 2. How this phase is graded?
 
@@ -100,12 +101,12 @@ You need to be precise, discrete, and organized.
 
 ### 4. Can I use the same problem proposed in selected proposals or past project website?
 
-Unless you provide a major update I will most probably reject your proposal.
+Unless you provide a **major update** I will most probably reject your proposal.
 
 ### 5. Can I use the same problem statement I use in my graduation project (or thesis)?
 
-You can use the same domain, but you have to tackle a different issue other than the one you're investigating in your graduation project (thesis).
+You can use the same domain, but **you have to tackle a different issue other than the one you're investigating in your graduation project (thesis)**.
 
 ### 6. What happens if I miss listing any of the projects I participated in that are similar to my course project?
 
-If we find out that any other course you were enlisted in with a similar problem statement and you haven't notified us, the cheating and plagiarism policy will be applied.
+If we find out that any other course you were enlisted in with a similar problem statement and you haven't notified us, **the cheating and plagiarism policy will be applied**.
