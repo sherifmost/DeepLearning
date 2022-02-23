@@ -18,6 +18,6 @@ The MNIST is a dataset of handwritten digits, has a training set of 60,000 examp
 Also, the dataset is [builtin in keras](https://keras.io/api/datasets/mnist/) and you can download & load it directly using one code line.
 
 ## 3 - Requirements
-
+* In case the submission form contains questions you should answer, please have a look at the questions first and prepare the answers while working on the lab; so as not to get stuck while submitting your work.
 * Solve [this notebook](lab2.ipynb) of the assignment and deliver a filled ipython notebook that shows the best output found in your experiments.
 * You should deliver a PDF report that has tables summarize all your work and experiments.
