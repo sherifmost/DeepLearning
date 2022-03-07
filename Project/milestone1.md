@@ -38,7 +38,7 @@ You are required to make a presentation containing the following.
 1. You have to make the presentation using the submitted slides, a penalty is applied otherwise.
 2. We expect to see results, however, that depends on the nature of the problem and the struggles you encounter.
 3. The key role in grading this part is your collective understanding of the problem and the amount of effort made regardless of the results, we will evaluate this based on your work and our discussion during the presentation.
-4. Your presentation will take only *ten minutes*, three of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within 7 minutes.
+4. Your presentation will take only *nine minutes*, two of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within 7 minutes.
 5. **The recorded video of the presentation will be submitted days before your live presentation. Make sure not to get confused by this point.**
 6. The recorded video of the presentation should not exceed seven minutes and should be at least of five minutes.
 7. The provided selected presentations might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
