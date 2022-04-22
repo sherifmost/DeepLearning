@@ -116,7 +116,7 @@ The following is a selected list of previous terms publication-quality papers:
 1. The presentation should be about all the course project, not the progress during final delivery only.
 2. You are to continue your code/research work during this phase to finish all your proposed updates beside working on the other requirements.
 3. You have to make the presentation using the submitted slides, a penalty is applied otherwise.
-4. Your presentation will take only *ten minutes*, three of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within 7 minutes.
+4. Your presentation will take only *nine minutes*, two of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within 7 minutes.
 5. **The recorded video of the presentation will be submitted days before your live presentation. Make sure not to get confused by this point.**
 6. The recorded video of the presentation should not exceed seven minutes and should be at least of five minutes.
 7. The provided selected presentations, selected posters, and website might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
