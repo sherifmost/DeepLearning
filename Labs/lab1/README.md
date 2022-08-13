@@ -23,7 +23,7 @@
 
 ## 4 - Requirements
 
-* In case the submission form contains questions you should answer, please have a look at the questions first and prepare the answers while working on the lab; so as not to get stuck while submitting your work.
+* In case the submission form contains questions you should answer, **please have a look at the form questions first** and prepare the answers while working on the lab; so as not to get stuck while submitting your work.
 * Solve [part 1](lab1_part1.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part.
 * Solve [part 2](lab1_part2.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part.
 * You should deliver a report **explaining all your work and your experiments**.
