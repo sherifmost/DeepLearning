@@ -6,6 +6,7 @@
 
 * Building a model for multinominal classification task.
 * Understanding the effect of using CNNs in models.
+* Having a look at machine learning interpretability using [SHAP](https://shap.readthedocs.io/en/latest/overviews.html).
 
 ## 2 - MNIST Dataset
 
