@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Anime Character Ageing</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Anime Character Ageing</h1>
+        <ul class="list-unstyled">
+          <li>Adham Hegazy</li>
+          <li>Ahmed Wael</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			The project aims to create a model that ages teen anime characters into seniors, and vice versa. In order to do so, we will use the CycleGAN, which is utilized in similar problems of other domains. It is notable to say that based on our research, this project is the first to tackle this specific problem in the anime characters domain. 
+
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+          We did not find a suitable labeled dataset which can be utilized. What we did find is a scraper by Lukeperson for the AnimeCharacters website, however we did heavy modifications to improve efficiency. 
+          <br>  
+          <br>
+
+          Moving forward, the images needed to pass by a face-cropper first to be usable by the model, since it was only interested in the face. For this issue, the croppers of Nagadomi and Katerina was utilized. 
+          <br>
+          <br>
+
+          After these steps, the dataset that we had needed to be increased to make sure that the model was not overfitting. So multiple augmentation techniques where applied, such as flipping the images horizontally, and adjusting brightness and contrast. 
+          <br>
+          <br>
+          Scrapped dataset example:
+		</p>
+
+		<!-- <br/> Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/imagenet.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/imagenet1.png" class="img-fluid text-center">
+      </div>
+      <br/> 
+
+      <p>
+        Cropped dataset example:
+      </p>
+      
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/cropped1.png" class="img-fluid text-center">
+      </div>
+      <br/> 
+
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/cropped.png" class="img-fluid text-center">
+      </div>
+      <br/> 
+
+
+      </div>
+    
+    
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+			As mentioned, our problem statement is ageing and de-aging of anime characters. To achieve that, the input image should be a teen anime character, then the output should be an aged version of it. This is reversed when deaging as it should have a senior anime character as its input and it outputs a deaged version of it.
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/examples.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <p>
+			Since we found no existing models for aging and deaging anime characters, there are no state of the art models. However, we used an architecture that solved the same problem in humans, which is the CyclicGAN as it also came with the benefit of not requiring paired dataset. 
+		</p>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+			The general CycleGan Architecture
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/model.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+
+      <p>
+        Our specific GAN: Generator (Blue) and Discriminator (Pink)
+      </p>
+  
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+            <img src="resources/images/model2.png" class="img-fluid text-center">
+        </div>
+        <br/> <!-- Empty Line after the image -->
+        </div>
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <p>
+			Add all the model updates you made here, need as many images as you wish
+		</p>
+
+		<h5 class="mt-5">Update #1: Data (Scraping, Cropping & Augmenting</h5>
+		<p>
+			As mentioned before, we did not have the dataset that we worked on. This dataset in itself is an update, since we needed to modify an existing scrapper, then crop it using two croppers, then augment it.
+
+      <br>
+      <br>
+
+      This can be considered in itself an independent update, as it can prove useful for future models which require large datasets of anime characters' faces.
+
+		</p>
+		
+
+		<h5 class="mt-5">Update #2: Model Variations</h5>
+		<p>
+			In an attempt to find a model that works best for the domain at hand, we did a variety of hyperparameter tuning such as:
+      <ul>
+        <li>Image Size: 256x256, <strong>128x128</strong>, 64x64</li>
+        <li>Generator Middle Conv2D Activations: <strong>ReLU</strong>, Tanh</li>
+        <li>Generator Output Conv2D Activation: <strong>Tanh</strong>, ReLU</li>
+        <li>Cycle-consistency Loss:<strong> 0.1, 0.05,</strong> 0.01</li>
+        <li>Identity Loss: 0.1, <strong>0.05</strong></li>
+        <li>Base Filter Size: <strong>64</strong>, 128</li>
+        <li>Batch Size: 1, <strong>8</strong>, 16, 32</li>
+        <li>Discriminator Trainability in combined GAN: False, <strong>True</strong></li>
+
+      </ul> 
+      where the bold ones proved to have the highest potential.
+		</p>
+		<br/> <!-- Empty Line before the image -->
+
+    </div>
+
+
+
+
+
+    <h5 class="mt-5">Update #3: Integrating Quantitative Metric</h5>
+		<p>
+			The original base model did not have a quantitative metric that evaluated the generated images. Therefore we had to intigrate the chosen quantitative metric in the code, which is the frechet inception distance. 
+      <br>
+
+      The FID was introduced by Heusel et al. in 2017 and it uses “Inception v3 - 2015” pretrained model. 
+
+      <br>
+       This metric aims to measure similarity between feature vectors of 2 groups of images, and is considered one of the most popular quantitative metrics for GANs.
+		</p>
+      <br/> <!-- Empty Line before the image -->
+      <div class="img-container" align="center"> <!-- Block parent element -->
+          <img src="resources/images/update3.png" class="img-fluid text-center">
+      </div>
+      <br/> <!-- Empty Line after the image -->
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+			Add your results here, add graphs and images to illustrate it.
+			Compare your results to the original model and state of the art
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/results.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/results2.png" class="img-fluid text-center">
+    </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <p>
+        Here you will detail the details related to training, for example:
+        </p>
+
+        <ul>
+          <li>Programming framework: Keras</li>
+          <li>Training hardware: Colab and Local Machine (Macbook Pro 2019 - Intel i9 32 GB RAM - 4 GB dedicated graphics)</li>
+          <li>Number of epochs: For every variation, the number of epochs ranged from 3 to 60 epochs. This was obviously highly dependent on the number of parameters, which was in turn mainly dependent on the image size and the number of filters. We settled on a model that was trained for 19 epochs.</li>
+          <li>Training time: It is very difficult to track, but Ahmed would train the model for 16-24 hours on Google Colab (using 2-3 different accounts with 8 hours of GPU each), and Adham would train on his local machine overnight and throughout the day </li>
+          <li>Time per epoch: highly variating from around 8 minutes to 3 hours. </li>
+          <li>Any other important detail or difficulties: Being the pioneers of a specific problem mandates that you need to dedicate a lot of time on secondary matters before even running the model, so we had less opportunities for hyperparameter tunning.  </li>
+        </ul> 
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        
+        <h2 class="mt-5">Conclusion & Future Work</h2>
+
+        <p>
+          We laid the foundation for the problem of anime character ageing, and we can confirm that the initial model is – as of now – one of the two best performing models. We have also noticed, visually, that some models reconstructed the original image perfectly, but failed to apply proper ageing.
+In addition, while quantitative metrics are more time-efficient, they are not always the most reliable. We realized this from our work, since models with different FIDs appeared to have the same visual success level. Therefore, a balance should be stricken between both.
+
+          <br>
+          <br>
+          The model itself is the first step for Anime character ageing and de-aging. We suggest varying the cyclic-consistency loss further to give more weight to the Generator loss for better ageing and deageing.
+Additionally, the dataset can be useful for anime-related models in general. Finally, integrating the FID in CycleGAN can be useful for other use cases with similar architecture.
+      </p>
+
+      </div>
+    </div>
+	
+    
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+
+		<ol>
+
+      <li><a href="https://blog.paperspace.com/use-cyclegan-age-conversion-keras-python/">Implementing CycleGAN for Age Conversion, Anil Chandra Naidu Matcha</a></li>
+
+		  <li><a href="https://arxiv.org/abs/1802.03446">Pros and Cons of GAN Evaluation Measures, Ali Borji, 2018</a></li>
+		  <li><a href="https://arxiv.org/abs/1406.2661">Generative Adversarial Networks, Ian Goodfellow et al., 2014</a></li>
+		  <li><a href="https://arxiv.org/abs/1801.01973">A note on the inception score, Shane Barratt Rishi Sharma</a></li>
+
+      <li><a href="https://arxiv.org/abs/1703.10593">Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks, ICCV 2017  ·  Jun-Yan Zhu, Taesung Park, Phillip Isola, Alexei A. Efros</a></li>
+      <li><a href="https://arxiv.org/abs/1511.01844">A note on the evaluation of generative models, Theis et al., 2015</a></li>
+      <li><a href="https://arxiv.org/abs/1811.07465">Bayesian Cycle-Consistent Generative Adversarial Networks via Marginalizing Latent Sampling, Haoran You, Yu Cheng, Tianheng Cheng, Chunliang Li, Pan Zhou</a></li>
+
+      <li><a href="https://arxiv.org/abs/1796.08500">GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium, Heusel et al., 2017</a></li>
+      <li><a href="https://doi.org/10.1186/s40537-019-0197-0">Shorten, C., Khoshgoftaar, T.M. A survey on Image Data Augmentation for Deep Learning. J Big Data 6, 60 (2019)</a></li>
+      <li><a href="https://www.researchgate.net/publication/341462013">Deep Snow: Synthesizing Remote Sensing Imagery with Generative Adversarial Nets</a></li>
+
+
+		</ol> 
+	  </div>
+	</div>
+
+
+  <div class="row">
+    <div class="col-lg-12 text-left">
+      <h2 class="mt-5">Database Website & Tools Used and Modified</h2>
+
+    <ol>
+      <li><a href="https://www.animecharactersdatabase.com/">Database</a></li>
+      <li><a href="https://github.com/aryanpanpalia/anime-pix2pix/blob/main/data_gathering/scraper.py">Scraper</a></li>
+      <li><a href="https://github.com/nagadomi/lbpcascade_animeface">Cropper 1</a></li>
+      <li><a href="https://stackoverflow.com/questions/13211745/detect-face-then-autocrop-pictures">Cropper 2</a></li>
+
+
+    </ol> 
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

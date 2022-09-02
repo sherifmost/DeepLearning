@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Abstractive Text Summarization</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Abstractive Text Summarization (2)</h1>
+        <ul class="list-unstyled">
+          <li>Mohammed Zaieda</li>
+          <li>Omar Ali</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+        <p>
+          Abstractive text summarization is the task of generating a short and concise summary from important
+          ideas/phrases of
+          the text. Text summarization has many applicable benefits in production which include
+          summarizing medical reports for faster analysis and medical actions, 
+          media monitoring and surveillance tracking, and
+          data refinement and memory reduction. 
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+          There are multiple datasets for performing abstractive text summarization. The more relevant ones are:
+        </p>
+        <ul class="list-unstyled">
+          <li>CNN/Daily Mail</li>
+          <li>WikiHow</li>
+          <li>XSum</li>
+          <li>Amazon Fine Food Reviews</li>
+        </ul>
+        <p>
+          The dataset we chose was XSum which consists of 226,711 news articles accompanied with a one-sentence summary. The articles are collected from
+          BBC articles from 2010 up until 2017. For the sake of our project we will be using XSum dataset as it conveys better support in trasnfer learning. 
+        </p>
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/xsum.jpg" class="img-fluid text-center" width="400" height="600">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+          Below are two examples of the desired input and output, where the output is a summarized version of the input.
+        </p>
+
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/examples.jpg" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <p>
+        
+        </p>
+
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/sota.jpg" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+          <h5> PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization </h5>
+          PEGASUS masks multiple whole sentences rather than smaller continuous text spans.
+          <ul>
+            <li>Masking strategies:</li>
+            <ul>
+              <li>Masking random sentences.</li>
+              <li>Masking the first m-sentences, also known as Lead.</li>
+              <li>Masking the top m-scored sentences based on their importance using Rouge-1.</li>
+            </ul>
+            <li>Uses a transformer encoder to mask sentences, and a transformer decoder to produce the target text.</li>
+          </ul>
+        </p>
+
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/model.png" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <h5 class="mt-5">Update #1: Tried different word embedding algorithm: Word2Vec</h5>
+        <p>
+          The word2vec algorithm learns word connections from a huge corpus of text using a neural network model. 
+          Once trained, the model can detect synonyms and recommend new words for a sentence. As the name suggests, word2vec associates each different word with a specific vector. 
+          The semantic similarity between the words can then be approximated via certain mathematical functions applied on their vectors, such as cosine similarity between vectors.
+        </p>
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/word2vec.jpeg" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+
+        <h5 class="mt-5">Update #2: Performed data augmentation: Back Translation</h5>
+        <p>
+          Data augmentation is typically used to reduce overfitting by generating additional training data using some techniques applied on the original training data. 
+          Back translation is one of the data augmentation techniques used for NLP tasks which invloves translating some samples from the dataset into another languauge (e.g. from English to French)
+          then translating it back to the original language. This will mostly generate a paraphrased sentence of the original one.
+        </p>
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/back_translation.jpeg" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+          <p>When it comes to the results, the paper ROUGE-2 score found was 24.56, however, the one generated from the pretrained
+          transformer produced 1.934, this is due to reducing the training dataset size due to resources limitations. The first
+          table shows the word2vec modification which as you can see is much lower. The data augmentation were very similar to the
+          actual model.
+          </p>
+          <p>In conclusion, we believe that if we were allocated the enough resources, interesting results would have been obtained.
+          As such, For future work, we will attempt to keep the model running longer and perform hyperparameter tuning for the
+          word embedding. We might also want to introduce a different type of dataset.
+          </p>
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/results1.jpeg" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+
+        <br /> <!-- Empty Line before the image -->
+        <div class="img-container" align="center">
+          <!-- Block parent element -->
+          <img src="resources/images/results2.jpeg" class="img-fluid text-center" width="600" height="900">
+        </div>
+        <br /> <!-- Empty Line after the image -->
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <ul>
+          <li>Programming framework</li>
+            <ul>
+              <li>PyTorch</li>
+            </ul>
+          <li>Training hardware</li>
+            <ul>
+              <li>Google Colab</li>
+              <li>Google Cloud</li>
+            </ul>
+          <li>Training time</li>
+            <ul>
+              <li>Max. 8 hours (on Google Cloud resources)</li>
+            </ul>
+          <li>Number of epochs</li>
+            <ul>
+              <li>20 to 50 epochs</li>
+            </ul>
+          <li>Time per epoch</li>
+            <ul>
+              <li> Max. 25 min approximately (on Google Cloud resources)</li>
+            </ul>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Conclusion</h2>
+
+        <p>
+          Conclusion and future work (including lessons learned and interesting findings
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">References</h2>
+
+        <p>
+          List all references here, the following are only examples
+        </p>
+
+        <ol>
+          <li><a href="https://paperswithcode.com/task/abstractive-text-summarization">Problem statement url</a></li>
+          <li><a href="https://github.com/EdinburghNLP/XSum/tree/master/XSum-Dataset">Dataset URL</a></li>
+          <li><a href="https://paperswithcode.com/paper/pegasus-pre-training-with-extracted-gap">Model Reference URL</a></li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Project Title Here</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="../home.html"
+          >Practical Machine Deep Learning</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../home.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Abstractive Text Summarization (1)</h1>
+          <ul class="list-unstyled">
+            <li>Ali Ghazal</li>
+            <li>Sarah ElNaggar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Problem Statement</h2>
+          <p>
+            Abstractive Text Summarization is the task of generating a short and
+            concise summary that captures the salient ideas of the source text.
+            The generated summaries potentially contain new phrases and
+            sentences that may not appear in the source text.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Dataset</h2>
+
+
+          <h3>The Multilingual Amazon Reviews Corpus</h3>
+          <p> Contains reviews of amazon products. Each review contains a header (summary) and a review body ( document). We used them to fine-tune our model for summarization.</p>
+          
+          <table>
+            <tr>
+              <td>training</td>
+              <td>20,000</td>
+            </tr>
+            <tr>
+              <td>Validation</td>
+              <td>5,000</td>
+            </tr>
+            <tr>
+              <td>Test</td>
+              <td>5,000</td>
+            </tr>
+          </table>
+          
+          <br />
+
+          <h3>XSUM</h3  >
+          <p>Contains articles from multiple news sources coupled with human produced extreme (very short) summary  </p>
+
+
+          <table>
+            <tr>
+              <td>training</td>
+              <td>204,045</td>
+            </tr>
+            <tr>
+              <td>Validation</td>
+              <td>11,332 </td>
+            </tr>
+            <tr>
+              <td>Test</td>
+              <td>11,332 </td>
+            </tr>
+          </table>
+
+         
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/imagenet.jpeg"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+         
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Input/Output Examples</h2>
+          
+          <h3 class="mt-5">Input</h3>
+
+          <p>
+            Jordan Hill, Brittany Covington and Tesfaye Cooper, all 18, and Tanishia Covington, 24, appeared in a Chicago court on Friday.\nThe four have been charged with hate crimes and aggravated kidnapping and battery, among other things.\nAn online fundraiser for their victim has collected $51,000 (Â£42,500) so far.\nDenying the four suspects bail, Judge Maria Kuriakos Ciesil asked: "Where was your sense of decency?"\nProsecutors told the court the beating started in a van and continued at a house, where the suspects allegedly forced the 18-year-old white victim, who suffers from schizophrenia and attention deficit disorder, to drink toilet water and kiss the floor.\nPolice allege the van was earlier stolen by Mr Hill, who is also accused of demanding $300 from the victim\'s mother while they held him captive, according to the Chicago Tribune.\nThe court was also told the suspects stuffed a sock into his mouth, taped his mouth shut and bound his hands with a belt.\nIn a video made for Facebook Live which was watched millions of times, the assailants can be heard making derogatory statements against white people and Donald Trump.\nThe victim had been dropped off at a McDonalds to meet Mr Hill - who was one of his friends - on 31 December.\nHe was found by a police officer on Tuesday, 3 January, a day after he was reported missing by his parents.\nProsecutors say the suspects each face two hate crimes counts, one because of the victim\'s race and the other because of his disabilities.
+          </p>
+
+          <h3 class="mt-5">Output</h3>
+
+          <p>
+            Four people accused of kidnapping and torturing a mentally disabled man in a "racially motivated" attack streamed on Facebook have been denied bail.
+          </p>
+    
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">State of the art</h2>
+
+          <p>
+            State here state of the art models and their accuracies
+          </p>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/so"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Orignial Model from Literature</h2>
+
+          <p>Various models have been proposed for the text summarization problem such as BERT, BART, PEGASUS, and T5. All those models follow the encoder decoder coupled with an attention mechanism. Those models achieved the state-of-the-art performance on the summarization task through train super powerful language models. For example, BART was trained on a variety of tasks such as text infilling, sentence deletion, and sentence permutation. Afterwards, those models were trained for the downstream tasks by tuning their weights by training them on the dataset of interest.  
+            There are many considerations while selecting a model. The main criteria that we have chosen was  the smallness of the model and the ease training them. We wanted to be able to gain quick feedback. Taking this into account, we decided to work the T5-small: the t5 version with the smallest number of Encoder-decoder layers. The T5 model was introduced in the paper Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer. The same exact model was pretrained to perform many downstream tasks such as translation, question answering, and summarization.
+          </p>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/new_text_to_text.jpg"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <p>	The Main Architecture of T5-small is as follows. It consists of Standard Encoder/decoder-based architecture. RelU Activation Function was mainly used. However, we experimented also with Gated-Glu Function which was previously proposed for the BART model. Lastly, it has a Self Attention Mechanism for both the encoder and the decoder. We also experimented with using cross-attention instead. </p>
+
+
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/encoder-decoder.png"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Proposed Updates</h2>
+
+          <p>
+            Add all the model updates you made here, need as many images as you
+            wish
+          </p>
+
+          <h5 class="mt-5">Update #1: Increase the beam search to 8 instead of 4</h5>
+          <h5 class="mt-5">Update #2: Increase the number of layers of T5-Small Model to 8 instead of 5</h5>
+          <h5 class="mt-5">Update #3: Change the activation function from RLUE to GLUE </h5>
+          <h5 class="mt-5">Update #4: Adding CrossAttention Mechanism </h5>
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Results</h2>
+
+          <h3>Stage Training</h3>
+          <h4>Rouge 1</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/stageD2.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h4>Rouge 2</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/stage1.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h3>Activation</h3>
+          <h4>Rouge 1</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/R1activation.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h4>Rouge 2</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r2_ativation.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <br />
+          <!-- Empty Line after the image -->
+
+
+          <h3>Cross Attention</h3>
+          <h4>Rouge 1</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r2att.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h4>Rouge 2</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r1att.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <br />
+          <!-- Empty Line after the image -->
+
+
+
+          <h3>Depth</h3>
+          <h4>Rouge 1</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r1depth.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h4>Rouge 2</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r2_depth.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h3>Number of BEAMs</h3>
+          <h4>Rouge 1</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r2_numofbeam.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h4>Rouge 2</h4>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/r1_numberofbeam.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h3>Training/Validation Loss</h3>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/ls.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/ls2.PNG"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Technical report</h2>
+
+          <p>
+            Here you will detail the details related to training, for example:
+          </p>
+
+          <ul>
+            <li> <strong> Programming framework: </strong> Python, tensorflow, huggingface Transformer  </li>
+            <li> <strong> Training hardware: </strong> colab, alienware aurora r11 with 2 Nividia GTX 2060  </li>
+            <li> <strong> Training time: </strong>   8 hours</li>
+            <li> <strong> Number of epochs: </strong> 10 </li>
+            <li> <strong> Time per epoch: </strong> 52 mins </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Conclusion</h2>
+
+          <p>
+            Throughout the project, we have built an abstractive summarization deep learning model. We experimented with different models. However, we decided to go with the T5-model. We experimented with different numbers of hyper-parameters such as the number of beams, number of layers, activation function, cross attention mechanism, and lastly stages training. As an output of this project, we are proposing utilizing the gated-glu activation function, cross attention mechanism, and increasing the number of beams utilized in the beam search.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">References</h2>
+
+          <p>List all references here, the following are only examples</p>
+
+          <ol>
+            <li>Abstractive text summarization. Papers With Code. (n.d.). Retrieved February 17, 2022, from https://paperswithcode.com/task/abstractive-text-summarization
+            </li>
+            <li>Attention is all you need - neurips. (n.d.). Retrieved February 17, 2022, from https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+            </li>
+            <li>Liu, Y., & Lapata, M. (2019). Text summarization with pretrained encoders. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). https://doi.org/10.18653/v1/d19-1387
+            </li>
+            <li>Nallapati, R., Zhou, B., dos Santos, C., Gulcehre, C., & Xiang, B. (2016). Abstractive text summarization using sequence-to-sequence RNNS and beyond. Proceedings of The 20th SIGNLL Conference on Computational Natural Language Learning. https://doi.org/10.18653/v1/k16-1028
+            </li>
+            <li>See, A., Liu, P. J., & Manning, C. D. (2017). Get to the point: Summarization with Pointer-Generator Networks. Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). https://doi.org/10.18653/v1/p17-1099 
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.slim.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

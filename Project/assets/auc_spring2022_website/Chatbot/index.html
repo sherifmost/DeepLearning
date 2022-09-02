@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Avenir Next', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            margin: 20px auto;
+            width: 1200px;
+        }
+        
+        b {
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            table-layout: fixed;
+        }
+        
+        .ghost {
+            padding: 10px;
+            height: 150px;
+            width: 150px;
+            background-color: #FFFE00;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+        
+        .leftpanel {
+            float: left;
+            width: 300px;
+            height: 10000px;
+            color: #6c6c6c;
+        }
+        
+        .leftpanel a {
+            text-decoration: none;
+            color: #6c6c6c;
+        }
+        
+        .leftpanel ul {
+            padding: 0;
+            margin-left: 20px;
+        }
+        
+        .leftpanel li {
+            display: block;
+            padding: 11px 16px;
+        }
+        
+        .leftpanel li:hover {
+            background-color: #f3f3f3;
+        }
+        
+        .rightpanel th {
+            text-align: left
+        }
+        
+        .rightpanel {
+            padding-left: 310px;
+            padding-top: 5px;
+        }
+        
+        .rightpanel th,
+        td {
+            padding: 15px;
+            font-weight: normal;
+        }
+        
+        .bold-headers th {
+            font-weight: 600;
+        }
+        
+        .tab {
+            display: inline-block;
+            margin-left: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="leftpanel">
+        <img src="resources/images/chatbot.png" width="280" height="200">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top ">
+            <div class="container ">
+                <a class="navbar-brand " href="../home.html ">Practical Machine Deep Learning</a>
+                <!--<button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarResponsive " aria-controls="navbarResponsive " aria-expanded="false " aria-label="Toggle navigation ">-->
+                <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarResponsive ">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item active ">
+                            <a class="nav-link " href="../home.html ">Home
+                  <span class="sr-only ">(current)</span>
+                </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="../about.html ">About</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="../contact.html ">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!--Navigation -->
+    <div class="rightpanel">
+
+        <!-- Page Content -->
+        <div class="container ">
+            <div class="row ">
+                <div class="col-lg-12 text-center ">
+                    <h1 class="mt-5 ">Chatbot</h1>
+                    <ul class="list-unstyled ">
+                        <li>Amr Kandil<span class="tab"></span><span class="tab"></span>900181344</li>
+                        <li>Joseph Emad <span class="tab"></span> 900183201</li>
+                    </ul>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Problem Statement</h2>
+                    <p>
+                        Creating a Chatbot with a consistent personality that can replicate human conversational abilities and chat with a user about anything he likes.
+                    </p>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Dataset</h2>
+
+                    <p>
+                        The dataset we chose is the Persona Chat dataset, which is a dataset designed specifically to tackle the problem of making a consistent personality for the chatbot model. This dataset is composed of two things: personas and dialogues between these personas.
+                        The personas consist of at least 5 profile sentences, which are very simple like “I like football” for example, describing the personality of that specific persona. The dialogues are engaging conversations between the personas
+                        that were played by normal people trying to convey their assigned personas.</p>
+                    <p> There are also revised personas, which are basically copies of the original personas but avoid word overlaps with them by trying to be more general than the persona or even more specialized. This makes the model’s task much more challenging
+                        by avoiding modeling that takes advantage of trivial word overlap.The dataset contains 1155 personas, setting aside 100 personas for validation and 100 personas for testing. There are also rewritten sets of the original 1155 personas,
+                        which are the revised personas. These personas resulted in 162,064 utterances over 10,907 dialogs. 1000 dialogues that had 15,602 utterances are set aside for validation, and 968 dialogues containing 15,024 utterances are set aside
+                        for test.</p>
+                    <p>This dataset was perfect for our problem as it contained different personalities in addition to their conversation, this is why we chose this specific dataset. We also believe that it has enough examples to be able to train our model
+                        and increase the accuracy of the results.
+                    </p>
+
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/dataset.jpeg " class="img-fluid text-center" width="700" height="300">
+                    </div>
+                    <br/>
+                    <!-- Empty Line after the image -->
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Input/Output Examples</h2>
+
+                    <p>
+                        The input for the Chatbot is a normal text message and the Chatbot should figure out the best way to respond. The chatbot also tries to keep a consistent personality and to get more engaged and ask questions.
+                    </p>
+
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/image1.png " class="img-fluid text-center ">
+                    </div>
+                    <br/>
+                    <!-- Empty Line after the image -->
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">State of the art</h2>
+                    <p>
+                        In the second Milestone of the project, we discovered that the work of literature that we selected (Personalizing Dialogue Agents: I have a dog, do you have pets too?) was not the state of the art model that trains the "Persona-Chat" Dataset. Our Selected
+                        paper used a "KV Profile Memory" model.
+                    </p>
+
+                    <p>
+                        The work of litreture that achieved state-of-the-art model "P2 Bot" is titled "You Impress Me: Dialogue Generation via Mutual Persona Perception". You can find the paper in the references section.
+                    </p>
+                    <p>
+                        For the "Persona-Chat" dataset, the following diagram illustrates the difference in the F1 score between the state-of-the-art model "P2 Bot" and the work of litreture that we used "KV Profile Memory"
+                    </p>
+
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/state_of_art.png " class="img-fluid text-center " width="800" height="300">
+                    </div>
+                    <br/>
+                    <!-- Empty Line after the image -->
+
+                    <p>
+                        Later in our second Milestone, we discovered that our selected work of literature (Personalizing Dialogue Agents: I have a dog, do you have pets too?) was published in 2018. This is the same year when the BERT Model was first introduced. After researching,
+                        we discovered that the BERT model is the current state-of-the-art model for NLP.
+                    </p>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Orignial Model from Literature</h2>
+                    <p>
+                        In this model, the aim is to make chatbots more engaging by giving them a persistent persona to have a more consistent personality than normal chatbots. The problems of normal chatbots include lack of personality consistency as well as having a tendency
+                        for giving non-specific answers like “I don’t know” for example, due to having access to only recent dialogue history (Vinyals and Le, 2015). This model aims to solve these problems by training the model to ask and answer questions
+                        on personal topics, and using the dialogue to build a persona for the speaking partner.
+                    </p>
+                    <p>
+                        The Persona-Chat dataset was created especially to train these kinds of models and test their consistency as well as their engagement with the speaker compared to normal chatbots. The basic idea was to create some generic personas with general sentences
+                        about that personality and getting people to use that personality in an engaging dialogue, which would then be passed to the model in addition to the personas of the speakers for training. An example of two personas along with
+                        a dialogue between them is shown below.
+                    </p>
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/dataset.jpeg " class="img-fluid text-center " width="700" height="300">
+                    </div>
+
+                    <br/>
+
+                    <p>
+                        After the personas and the dialogues are passed to the model, it is trained using different techniques including ranking and generative models. There were 1155 personas for training, 100 for validation and 100 for testing. These personas generated a dataset
+                        of 162,064 utterances over 10,907 dialogs, 15,602 utterances (1000 dialogs) of which are set aside for validation, and 15,024 utterances (968 dialogs) for test. After training the models, they were tested using automated metrics
+                        in case of not specifying a persona, giving them an original persona, or giving them a revised persona, which is a persona similar to an original one but without overlapping any words. The results are shown below.
+                    </p>
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/image4.jpeg " class="img-fluid text-center " width="700" height="300">
+                    </div>
+
+                    <br/>
+
+                    <p>The results show that the Ranking models are better than the Generative models in all types of tests. The best Ranking model was the key-value profile memory model, which uses keys to perform attention and output the values instead
+                        of the same keys as the original. Another way to test the models was human evaluation, which is giving a normal person a persona as usual and putting that person in a conversation with a model but that person thinks that the other
+                        speaker is a normal person as well. After the dialogue is completed, the participant is asked to evaluate the fluency, engagingness and consistency of the model. The results of the human evaluation tests of the models compared
+                        to normal models based on Twitter and OpenSubtitles sources are shown below.
+                    </p>
+
+                    <br/>
+
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/image5.jpeg " class="img-fluid text-center " width="700" height="300">
+                    </div>
+                    <br/>
+                    <p>
+                        The results show that the models strongly outperform the Twitter and OpenSubtitles based models. Moreover, the Ranking PersonaChat models also continue to outperform the Generative PersonaChat models. The KV profile memory model is still better than the
+                        KV memory model. Of course, the human evaluation is still a lot higher than the models, yet there is a clear advance in the test results of the models, and the results are getting closer to the human results.
+                    </p>
+                    <p>
+                        In conclusion, the models using these techniques outperformed normal models in their consistency, personality-wise, as well as the engagingness. This was a big step towards getting models to have a consistent personality. The next step is to let the model
+                        ask questions about the users’ personas, remember the answers, and use them naturally in conversation.
+
+                    </p>
+
+                    <!-- Empty Line after the image -->
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Proposed Updates</h2>
+
+                    <h5 class="mt-5 ">1. PERSONA-CHAT:</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li> Trained the model on our dataset and got better results than the first dataset (empathetic dialogues) The model we were using depended on a dataset called “empathetic dialogues” that only gave the chatbot a sense of emotions
+                                    to know how the user is feeling.
+                                </li>
+                                <li>We trained the model using the “Persona-chat” dataset that helped maintain a personality for the chatbot.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/personachat.png " class="img-fluid text-center" width="375" height="450">
+                    </div>
+                    <br/>
+                    <!-- Empty Line after the image -->
+
+                    <h5 class="mt-5 ">2. TRANSFER LEARNING:</h5>
+                    <p>
+                        In the initial milestone of the project, we trained the Persona-Chat Dataset on a pretrained models from ParlAI. The model is a transfer-generator model and can be found on ParlAI's website by the name "ZOO:TUTORIAL_TRANSFORMER_ GENERATOR/MODEL".
+                    </p>
+                    <p>
+                        Note that we did not leave the model train for a lot of time, because most models required a huge amount of time (in the range of days). Accordingaly, when training a model, we constrained the training time to the time we desire.
+                    </p>
+                    <p>
+                        When we used transfer learning, we were able to obtain better results (lower loss values and the chatbot was responding with very logical answers) in the shortest training time possible.
+                    </p>
+
+
+                    <h5 class="mt-5 ">3. HYPERPARAMETERS:</h5>
+                    <p>
+                        Fine tuned the hyperparameters including the optimizer and batch size to enhance the performance of the model and get a more consistent personality for the model
+                    </p>
+
+
+                    <h5 class="mt-5 ">4. BERT:</h5>
+                    <p>
+                        We did not find any work of literature using the BERT model on the Persona-Chat dataset. We used the BERT model provided my ParlAI and trained it on the Persona-Chat dataset.
+                    </p>
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/bert.jpeg " class="img-fluid text-center " width="700" height="400">
+                    </div>
+                    <br/>
+                    <!-- Empty Line after the image -->
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Results</h2>
+
+                    <p>
+                        When we trained the persona chat on the Pretrained model "ZOO:TUTORIAL_TRANSFORMER_ GENERATOR/MODEL" for two hours, we got a loss of 2.60
+                    </p>
+                    <p>
+                        Training the BERT model on the personachat dataset for 6 hours (0.125 ephochs), we achieved a loss of o.92
+                    </p>
+
+
+                    <br/>
+                    <!-- Empty Line before the image -->
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/results.jpeg " class="img-fluid text-center " height="300" width="500">
+                    </div>
+                    <br/>
+                    <!-- Empty Line after the image -->
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Technical report</h2>
+                    <p>
+                        Here you will detail the details related to training, for example:
+                    </p>
+
+
+                    <h5 class="mt-5 ">1. Programming framework:</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li>ParlAI</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5 class="mt-5 ">2. Training hardware i.e. colab or azure or anything else</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li> Google Collab and jupyter notebook for running our code
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5 class="mt-5 ">3. Training time:</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li> We trained the BERT model for a total of 6 hours
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5 class="mt-5 ">4. Number of epochs:</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li> 0.125 epochs
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5 class="mt-5 ">5. Time per epoch:</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li> The epochs takes 48 hours to train</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5 class="mt-5 ">6. Any other important detail or difficulties:</h5>
+                    <div class="row ">
+                        <div class="col-lg-12 text-center ">
+                            <ul class="list-unstyled ">
+                                <li> The model needed a huge amount of time to train over the whole data set.
+                                </li>
+                                <li> Running on google Collab, was not convinient, because google stops running our model after a period of 5-6 hours</li>
+                                <li>Accordingaly, we decieded to train the model locally on Jupyter notebook, and we were limited by our hardware specs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <br/>
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">Conclusion</h2>
+
+                    <p>
+                        Conclusion and future work (including lessons learned and interesting findings
+                    </p>
+                    <p>
+                        First of all, we found out that using transfer learning and loading the pramaters of an existing model was much better than taining a new seq2seq model from the start
+                    </p>
+                    <p>
+                        In addition, Using the BERT model was much more efficient and reduced the model loss significantly. Even though we only ran the model on 0.125 epoch and we were training the model from the start, the model loss was lower than that of running the pretrained
+                        model
+                    </p>
+                    <p>
+                        Besides, the diagram below shows that the BERT model,in the 0.125 epoch we ran, had its accuracy increasing.
+                    </p>
+                    <div class="img-container " align="center ">
+                        <!-- Block parent element -->
+                        <img src="resources/images/results.jpeg " class="img-fluid text-center " height="300" width="500">
+                    </div>
+                    <p> Note that graph is fluctuating a lot. That's because we could not run the model with a batch size greater than 1, due to the hardware limitations of our laptops. Accordingaly, the model parameters were changed after each batch (which
+                        is only 1 sample from the dataset). </p>
+                    <p>
+                        Finally, when interacting with the chatbot, the chatbot was not providing sound responses because it did not have a relatively large training time and it was only trained on 1/8 of the dataset, so the model's dictionary is limited.
+                    </p>
+
+
+                </div>
+            </div>
+            <br/>
+
+            <div class="row ">
+                <div class="col-lg-12 text-left ">
+                    <h2 class="mt-5 ">References</h2>
+                    <ol>
+                        <li><a href="JMLucas,FFerna ́ndez,JSalazar,JFerreiros,and R San Segundo. 2009. Managing speaker iden- tity and user profiles in a spoken dialogue system.Procesamiento del Lenguaje Natural, 43:77–84. 
+                            https://arxiv.org/pdf/2004.05388v1.pdf">Problem statement url</a></li>
+                        <li><a href="https://github.com/facebookresearch/ParlAI/blob/main/projects/polyencoder/README.md ">hyperparameters</a></li>
+                        <li><a href="https://parl.ai/docs/zoo.html#poly-encoder-transformer-convai2-model">BERT Model</a></li>
+                        <li><a href="https://colab.research.google.com/drive/1bRMvN0lGXaTF5fuTidgvlAl-Lb41F7AD#scrollTo=KtVz5dCUmFkN">Model Reference URL</a></li>
+                        <li><a href="https://towardsdatascience.com/perplexity-intuition-and-derivation-105dd481c8f3">Perplexity Intuition </a></li>
+                        <li><a href="https://arxiv.org/pdf/1801.07243v5.pdf">Personalizing Dialogue Agents</a></li>
+                        <li><a href="https://arxiv.org/pdf/2004.05388v1.pdf">You Impress Me</a></li>
+                        <li><a href="https://paperswithcode.com/sota/dialogue-generation-on-persona-chat-1">Papers using PersonaChat</a></li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="../vendor/jquery/jquery.slim.min.js "></script>
+        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    </div>
+
+</body>
+
+</html>
