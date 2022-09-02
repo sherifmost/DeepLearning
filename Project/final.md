@@ -75,7 +75,7 @@ The following is a list of posters from previous terms, just follow the general 
 
 You are required to create a website page for your project, I will use this page to create a website to present all your projects at one place, for better understanding, you can have a look at the past project websites:
 
-* [Alexandria University - CS 435 Deep Learning - Spring 2020](https://raw.githack.com/KhaledElTahan/DeepLearning/master/Project/assets/au_spring2020_website/home.html)
+* [AUC - CS 4606: Practical Machine Deep Learning - Spring 2022](https://raw.githack.com/sherifmost/DeepLearning/master/Project/assets/auc_spring2022_website/home.html)
 
 To create your website page, use the [website-template provided here](website-template/). The website-template has the following hierarchy:
 
