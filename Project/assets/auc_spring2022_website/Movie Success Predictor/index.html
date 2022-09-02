@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Movie Success Predictor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="../home.html"
+          >Practical Machine Deep Learning</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../home.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Movie Success Predictor</h1>
+          <ul class="list-unstyled">
+            <li>Menna Tageldien - 900182847</li>
+            <li>Nourhan Nada - 900181003</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Problem Statement</h2>
+          <p>
+            The film industry has been booming since the 'Golden Age of
+            Hollywood' in the 1930s. People back then would go to the cinema as
+            often as twice a week. Nowadays, there are hundreds of thousands, if
+            not millions, of movies to watch from the comfort of your own home.
+            The graph below demonstrates the increase in the number of movies
+            released in the United States and Canada in the past 20 years. As a
+            result of the large movie pool, we are often stuck with watching
+            movies that we do not enjoy and the movies end up failing. Most of
+            these movies end up costing their producers millions of dollars,
+            Disney's "Mars Needs Moms" lost almost $143.4 million.
+          </p>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/problem.png"
+              class="img-fluid text-center" width = "600" height = "100"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+          <p>
+            In order to prevent viewer dissatisfaction and producers’ financial
+            loss, we propose a movie success prediction program. Different
+            researchers investigate the success rate of a movie based on budget,
+            release time, and participating actors. An important aspect of
+            predicting the success of a movie is making sure that its resulting
+            revenue is larger than twice its budget. In this manner, producers
+            can predict the success of a potential movie before spending their
+            money. Viewers can also use this program to check if an
+            up-and-coming movie is worth watching.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Dataset</h2>
+
+          <p>
+            With the abundance of movies in our modern world, there is a wide
+            variety of datasets available. IMDB is one of the most popular
+            online databases with information on movies, their cast, crew, etc..
+            The IMDB dataset available on Kaggle only contains 1,000 movies and
+            does not provide the movie budgets, which is a major feature
+            required by our program, hence why we will not be using it. Below is
+            a figure of the columns included in the IMDB dataset. The IMDB
+            dataset is 309.77 kB.
+          </p>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/dataset.png"
+              class="img-fluid text-center" width = "800" height = "100"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+          <p>
+            Another dataset we found is “The MovieLens Dataset”, it contains
+            62,000 movies, however it does not contain our targeted features
+            such as the budget and rating. It is instead used in predictors that
+            utilize user reviews to predict a movie’s success. The MovieLens
+            Dataset contains 6 csv files: genome-scores.csv, genome-tags.csv,
+            links.csv, movies.csv, ratings.csv and tags.csv. The MovieLens
+            dataset is 1.07 GB.
+          </p>
+
+          <p>
+            Below we will discuss the model we chose to modify. This model used
+            it is own dataset that is collected from Movie Database API (TMDB).
+            TMDB consists of 375,377 movies dating from 1884 to 2018. The
+            dataset was cleaned and reduced to be suitable for the model used in
+            the chosen research. We will be using two datasets. The first being
+            the dataset used in the original model, it has 5,000 movies and
+            contains the features required by our program. Below is a figure of
+            the columns included in this dataset. The first dataset is 477 KB.
+          </p>
+
+          <br />
+          <!-- Empty Line before the image -->
+
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/dataset1.png"
+              class="img-fluid text-center" width = "800" height = "100"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <p>
+            The second dataset we are using is acquired from Kaggle and called
+            “The Movies Dataset”. It is a movie dataset with over 45,000 movies
+            and is 944 MB, it contains metadata on the movies from the Full
+            MovieLens Dataset. The files we are mainly targeting in this dataset
+            are movies_metadata.csv and credits.csv. Movies_metadata.cv consists
+            of 23 columns, the most fundamental being budget, revenue, genre,
+            runtime, and vote_average (rating). Credits.csv includes cast
+            information, which is one of the driving factors for the success of
+            movies. We believe these two datasets are not enough and we will be
+            acquiring larger, more suitable datasets before training our
+            program.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Input/Output Examples</h2>
+
+          <p>
+            The program takes in the movie information as an array and outputs
+            the probability of movie success. If the probability is higher than
+            50%, this indicates the movie is successful. The movie features it
+            takes as input include the following:
+          </p>
+          <ul>
+            <li>
+              Budget: all costs relating to the development, production, and
+              post-production of a film.
+            </li>
+            <li>Runtime: total movie time in minutes</li>
+            <li>Release Year</li>
+            <li>Average Rating</li>
+            <li>Rate Count: number of users that rated the movie</li>
+            <li>Genre</li>
+            <li>Country</li>
+            <li>
+              Certification US : movie rating that determines suitability by
+              viewer age
+            </li>
+          </ul>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/input.png"
+              class="img-fluid text-center" width = "800" height = "100"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+          <p>
+            These features are entered into the program, processed, and after it
+            predicts its revenue, the success of a movie is determined.
+          </p>
+
+          <p>The input is entered into an array as follows:</p>
+          <p>
+            ['budget', 'runtime', 'year', 'vote_average', 'vote_count',
+            'certification_US_G', 'certification_US_NC-17',
+            'certification_US_NR', 'certification_US_PG',
+            'certification_US_PG-13', 'certification_US_R', 'genre_Action',
+            'genre_Adventure', 'genre_Animation', 'genre_Comedy', 'genre_Crime',
+            'genre_Documentary', 'genre_Drama', 'genre_Family', 'genre_Fantasy',
+            'genre_History', 'genre_Horror', 'genre_Music', 'genre_Mystery',
+            'genre_Romance', 'genre_Science Fiction', 'genre_TV Movie',
+            'genre_Thriller', 'genre_War', 'genre_Western', 'country_Argentina',
+            'country_Australia', 'country_Austria', 'country_Belgium',
+            'country_Brazil', 'country_Canada', 'country_China', 'country_Czech
+            Republic', 'country_Denmark', 'country_Finland', 'country_France',
+            'country_Germany', 'country_Hong Kong', 'country_Hungary',
+            'country_India', 'country_Ireland', 'country_Israel',
+            'country_Italy', 'country_Japan', 'country_Mexico',
+            'country_Netherlands', 'country_New Zealand', 'country_Norway',
+            'country_Philippines', 'country_Romania', 'country_Russia',
+            'country_Singapore', 'country_South Africa', 'country_South Korea',
+            'country_Spain', 'country_Sweden', 'country_Switzerland',
+            'country_Thailand', 'country_Turkey', 'country_United Arab
+            Emirates', 'country_United Kingdom', 'country_United States of
+            America']
+          </p>
+          <p>
+            Input: [[200000, 100, 2012, 6, 40, 0, 0 , 0, 0, 0, 0, 1, 0, 0, 1, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 1, 0, 0, 0]]
+          </p>
+          <p>Output: 50.0%</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">State of the art</h2>
+
+          <p></p>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/sate.png"
+              class="img-fluid text-center" width = "700" height = "200"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Orignial Model from Literature</h2>
+
+          <p>
+            This research predicts a movie's success according to the revenues
+            of the movie. A movie is considered successful if the revenue is
+            twice the budget. The research tries to predict the output value
+            using four different algorithms: logistic regression, K-nearest
+            neighbors, decision tree, and random forest. Each algorithm uses the
+            same predictors and target value. The hyper-parameters are chosen
+            based on sklearn’s grid search to find the best accuracy. The grid
+            search uses a k-fold cross-validation with k=10.
+          </p>
+
+          <p>
+            The author of this research accessed the movie database API (TMDB)
+            [6] using the library tmdbsimple. This database consists of 375,377
+            movies with 16 rows of information. However, 75% of the movies data
+            was dropped because they are missing the revenue and the budget
+            which is an important feature of the model.
+          </p>
+
+          <p>
+            Below are the results of the original model . Logistic regression
+            showed the best results of 70.4% accuracy.
+          </p>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/original.png"
+              class="img-fluid text-center" width = "500" height = "100"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Proposed Updates</h2>
+
+          <h5 class="mt-5">Update #1: Ran Model</h5>
+          <p>Initial model achieved accuracy of 70.3% in logistic regression</p>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/logisticPNG.PNG"
+              class="img-fluid text-center"
+            />
+            <img
+              src="resources/images/Decision.png"
+              class="img-fluid text-center"
+            />
+            <img src="resources/images/r1.png" class="img-fluid text-center" />
+            <img src="resources/images/KNN.png" class="img-fluid text-center" />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h5 class="mt-5">Update #2: Used MLP Classifier</h5>
+          <p>
+            We tried to use grid-search and MLP classifier to get the best
+            hyper-parameters
+          </p>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img src="resources/images/MLP.PNG" class="img-fluid text-center" />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h5 class="mt-5">Update #3: Adjust Parameters</h5>
+          <p>
+            In logistic regression We tried experimenting with different layers,
+            loss functions, etc.However, We got lower Accuracy from intial
+            model.
+          </p>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/newLogistic.png"
+              class="img-fluid text-center"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+
+          <h5 class="mt-5">Update #4: CNN Attempt</h5>
+          <p>
+            We tried to experiement with CNN. However, we faced some errors
+            running the model. We had an attempt to write the code for CNN model
+            but we figured out that it is not suitable for the problem we want
+            to solve and it would probably outputs a lower accuracy.
+          </p>
+
+          <h5 class="mt-5">Update #5: Use Ensemble Learning</h5>
+          <p>
+            Ensemble learning is a general approach to machine learning that
+            seeks better predictive performance by combining the predictions
+            from multiple models.
+          </p>
+          <h6 class="mt-5">Decision Tree Classifier</h6>
+          <p>
+            We tried to use Decission Tree Classifier and to experiement
+            different depth. The best accuracy we could achieved is 72.6%. This
+            is higher accuracy than the original model by 2.6%.
+          </p>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/decision1.png"
+              class="img-fluid text-center" width = "400" height = "50"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+          <h6 class="mt-5">Random Forest Classifier</h6>
+          <p>
+            We tried to use Random Forest Classifier and to experiement
+            different depth. The best accuracy we could achieved is 72.9%. This
+            is higher accuracy than the original model by 2.9%.
+          </p>
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img
+              src="resources/images/forest.png"
+              class="img-fluid text-center" width = "400" height = "50"
+            />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+          <p>
+            We also attempted to change the learning rate. We got best accuracy
+            of random forest with learning rate of 0.0000001. The accuracy is
+            73.166%
+          </p>
+
+          <h5 class="mt-5">Update #6: Decision Tree GridSearch</h5>
+          <p>
+            Since we got appealing results from using Adaboost classifier with
+            decision tree. We decided to use GridSearch classfier to get the
+            best hyper-parameters. This resulted in a test score of 81.3%.
+          </p>
+          <p>
+            Hyper-parameters = { 'base_estimator__criterion': 'entropy',
+            'base_estimator__max_depth': 5, 'base_estimator__max_features':
+            None, 'base_estimator__min_samples_split': 9,
+            'base_estimator__splitter': 'best', 'learning_rate': 0.1,
+            'n_estimators': 2 }
+          </p>
+          <p>
+            This is the highest accuracy we could achieve from all our updates
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Results</h2>
+
+          <p>
+            The best Results we achieved is 81.3% compared to 70.2% of the
+            original model. We successful increased the accuracy by around 11.1%
+            using Adaboost classfier with grid search and decision tree.
+          </p>
+
+          <br />
+          <!-- Empty Line before the image -->
+          <div class="img-container" align="center">
+            <!-- Block parent element -->
+            <img src="resources/images/r3.png" class="img-fluid text-center" />
+          </div>
+          <br />
+          <!-- Empty Line after the image -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Technical Information</h2>
+
+          <ul>
+            <li>Programming framework: Jupyter Notebook</li>
+            <li>Training hardware: Google Colab</li>
+            <li>Training time: around 30 minutes</li>
+            <li>Number of epochs: 700 epochs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">Conclusion</h2>
+
+          <p>
+            In conclusion, we used the decision tree classifier along with AdaBoost and
+            GridSearch and successfully enhanced accuracy from 70.3% to 74.4%.
+          </p>
+          <p>Our future plans for this project includes:</p>
+          <ul>
+            <li>Adapting the model to predict TV show success.</li>
+            <li>Finding bigger dataset, incorporate more relevant features.</li>
+            <li>extending the model to predict projected revenue.</li>
+          </ul>
+
+          <p>
+            This project added to our technical skills. We learned how to train
+            and debug a model. We also learned how to save a model using the pickle
+            library. We learned how to use GridSearch with different models to
+            tune the hyper-parameters. We got introduced to MLPClassifier and learned how to build an ensemble of models like Adaboost.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-left">
+          <h2 class="mt-5">References</h2>
+
+          <ol>
+            <li>
+              <a
+                href="https://github.com/epfl-ada/
+              ada-2021-project-pyca/
+              "
+                >E. (2021). Box-office and Quotebank. GitHub.
+                https://github.com/epfl-ada/ ada-2021-project-pyca/
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://www.ijerd.com/paper/vol16-issue6/B16061014.pdf
+              "
+                >Fatima, A., & Pimple, S. (2020). Movie Success Prediction Using
+                Machine Learning. International Journal Of Engineering Research
+                And Development, 16(6), 10–14.
+                http://www.ijerd.com/paper/vol16-issue6/B16061014.pdf
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1007/s10796-016-9689-z"
+                >Lee, K., Park, J., Kim, I., & Choi, Y. (2016). Predicting movie
+                success with machine learning techniques: ways to improve
+                accuracy. Information Systems Frontiers, 20(3), 577–588.
+                https://doi.org/10.1007/s10796-016-9689-z
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://towardsdatascience.com/
+              metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
+              "
+                >Mishra, A. (2021, December 29). Metrics to Evaluate your
+                Machine Learning Algorithm. Medium.
+                https://towardsdatascience.com/
+                metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.eswa.2005.07.018"
+                >Sharda, R., & Delen, D. (2006). Predicting box-office success
+                of motion pictures with neural networks. Expert Systems with
+                Applications, 30(2), 243–254.
+                https://doi.org/10.1016/j.eswa.2005.07.018
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1145/3437963.3441760"
+                >Vaucher, T., Spitz, A., Catasta, M., & West, R. (2021).
+                Quotebank. Proceedings of the 14th ACM International Conference
+                on Web Search and Data Mining.
+                https://doi.org/10.1145/3437963.3441760
+              </a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1016/j.eswa.2008.07.064"
+                >Zhang, L., Luo, J., & Yang, S. (2009). Forecasting box office
+                revenue of movies with BP neural network. Expert Systems with
+                Applications, 36(3), 6580–6587.
+                https://doi.org/10.1016/j.eswa.2008.07.064
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.slim.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

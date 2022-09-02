@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project Title Here</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Real / Fake Job Post Prediction</h1>
+        <ul class="list-unstyled">
+          <li>Dina Bishr - 900181303</li>
+          <li>Mariam Daabis - 900182265</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			As a result of the pandemic, there has been a significant increase in the number of online jobs offered on various employment portals. It has been reported that not all job postings are legitimate, which can pose problems with the job posting website and their credibility. It can also be a security threat since the scammers can be using the applicants' information to steal their identities. 
+Using advanced deep learning techniques, we are trying to predict whether these job postings are real or fake to be filtered early on.
+
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+			Our problem contains only one available dataset provided by The University of the Aegean and available on kaggle; it was used in many models and research papers.
+		</p>
+<p>Dataset Name: Dataset of real and fake job postings </p>
+<p>
+Link: https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction 
+</p>
+<p>
+Size: 50MB
+</p>
+<p>
+This dataset includes almost 18 thousand job posts, 866 of them are fake jobs. The dataset consists of 18 columns including: 
+ </p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/ds.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+			Our input is a string containing the job description and the output is whether the job post is fradulent or not 
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/input_ouput.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <p>
+          BERT : Bidirectional Encoder Representations from Transformers
+        </p>
+        <p>
+          One of the most powerful NLP models that are currently being used in
+          recent studies. It is capable of processing text both left-to-right and right-to-left at the same
+          time.
+        </p>
+        <p>
+          It also provides pre-trained models on large amounts of data to
+          facilitate tasks such as semantic labeling and, more importantly, in our
+          case, sentence classification.
+        </p>
+ 
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/bert.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <p>
+ Also, we can find below the state of the art results acheived by several models on the same dataset we are using:
+      </p>
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/soa.png" class="img-fluid text-center">
+    </div>
+    <br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+		Orginal model used was Bi-LSTM
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/bilstm.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <p>
+        Our orignal code model consisted of the following layers:
+        </p>
+        <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/original_layers.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+     
+
+		<h5 class="mt-5">Update #1: Applied oversampling to the dataset</h5>
+	
+		<br/> <!-- Empty Line before the image -->
+  
+
+		<h5 class="mt-5">Update #2: Introduce tokenization and pad sequenece to model layers</h5>
+	
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/update2.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <h5 class="mt-5">Update #3: Add Batch Normalization and global Max Pool 1D layers</h5>
+	
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+            <img src="resources/images/update3.png" class="img-fluid text-center">
+        </div>
+        <br/> <!-- Empty Line after the image -->
+       
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+          We acheived an accuracy of 96% however, oversampling did not solve overfitting issue
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/result.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+	 	<ul>
+		  <li>Programming framework: tensorflow </li>
+		  <li>Training hardware: colab </li>
+		  <li>Training time: 3 hours</li>
+		  <li>Number of epochs:3</li>
+		  <li>Time per epoch : 1 hour</li>
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+
+	    <p>
+        Not all techniques that solve overfitting work. We have tried oversampling the data and it still overfit 
+      </p>
+      <p>
+        Since the model takes a lot of time to train it was very difficult to do extensive hyper-parameter tuning and variations  in the model architecture.
+      </p>
+        <p>
+        GloVe and the cleaning of the text and NLP in general highly affected the data thus the results were extremely different in a good way so we recommend it.
+                
+		</p>
+
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+
+
+
+		<ol>
+		  <li><a href="https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction">Dataset URL</a></li>
+		  <li><a href="https://www.kaggle.com/gauravsahani/real-or-fake-job-postings-with-bi-directional-lstm/notebook">Model Reference URL</a></li>
+      <li><a href="https://paperswithcode.com/method/bilstm">Paper URL</a></li>
+      <li><a href="https://paperswithcode.com/method/bert">State of the art model URL</a></li>
+      <li><a href="https://link.springer.com/content/pdf/10.1007/s11063-021-10727-z.pdf">Models table URL</a></li>
+    </ol> 
+	  </div>
+	</div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Grammatical Error Correction</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Grammatical Error Correction</h1>
+        <ul class="list-unstyled">
+          <li>Mina Gamil</li>
+          <li>Sherif Gabr</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			The main problem that we will be working on this semester is to detect grammatical errors and mistakes in written English text and identify (tag) them. Then, rewrite sentence with no grammatical mistakes. The goal is to train a model that is able to detect mistakes in spelling, punctuation, and grammar.
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+			The datasets used are English text corpuses created synthetically or used by shared tasks like BEA19 and CoNLL2014. They could be formatted in plain English text or in M2 format standardised using the ERRANT framework (more information about M2 format and ERRANT can be found in references below). The following are the datasets used for training:
+		</p>
+
+    <p>
+      <h5 class="mt-5">1. PIE A1 Synthetic Data </h5>
+      <ul>
+        <li>Consists of 2 files with same number of lines. One file contains the errorful English sentences, and the other contains the same sentences with no grammatical errors.</li>
+        <li>Each file contains 8,865,347 lines</li>
+        <li>The size of a single file is 1.13 GB</li>
+        <li>First 5 lines of both files:</li>
+      </ul>
+		</p>
+		<!-- <br/> Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sample_PIE.png" class="img-fluid text-center">
+    	</div>
+    <br/> <!-- Empty Line after the image -->
+
+    <p>
+      <h5 class="mt-5">2. Lang-8 Dataset</h5>
+      <ul>
+        <li>Consists of a single file in M2 format with ERRANT</li>
+        <li>Must be converted to source file (containing the errorful sentences) and target file (containing the corrected sentences)</li>
+        <li>The file contains 4,015,882 lines with 1,037,561 sentences</li>
+        <li>The size of the file is around 145 MB</li>
+        <li>A sample of the data:</li>
+      </ul>
+		</p>
+		<!-- <br/> Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sample_lang8.png" class="img-fluid text-center">
+    	</div>
+    <br/> <!-- Empty Line after the image -->
+
+    <p>
+      <h5 class="mt-5">3. NUCLE Dataset Release 3.3</h5>
+      <ul>
+        <li>Consists of a single file in M2 format standardised using the ERRANT framework</li>
+        <li>Must be converted to source file (containing the errorful sentences) and target file (containing the corrected sentences)</li>
+        <li>The file contains 158,784 lines with 57,151 sentences</li>
+        <li>The size of the file is around 9 MB</li>
+        <li>A sample of the data:</li>
+      </ul>
+		</p>
+		<!-- <br/> Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sample_nucle.png" class="img-fluid text-center">
+    	</div>
+    <br/> <!-- Empty Line after the image -->
+
+    <p>
+      <h5 class="mt-5">4. FCE Dataset</h5>
+      <ul>
+        <li>Consists of a single train file in M2 format standardised using the ERRANT framework</li>
+        <li>Must be converted to source file (containing the errorful sentences) and target file (containing the corrected sentences)</li>
+        <li>The file contains 111,387 lines with 28,350 sentences</li>
+        <li>The size of the file is around 5 MB</li>
+        <li>A sample of the data:</li>
+      </ul>
+		</p>
+		<!-- <br/> Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sample_fce.png" class="img-fluid text-center">
+    	</div>
+    <br/> <!-- Empty Line after the image -->
+
+    <p>
+      <h5 class="mt-5">5. W&I+Locness Dataset</h5>
+      <ul>
+        <li>Consists of many training files in M2 format standardised using the ERRANT framework, with a single file being the concatenation of all.</li>
+        <li>Must be converted to source file (containing the errorful sentences) and target file (containing the corrected sentences)</li>
+        <li>The file contains 143,562 lines with 34,308 sentences</li>
+        <li>The size of the file is around 7 MB</li>
+        <li>A sample of the data:</li>
+      </ul>
+		</p>
+		<!-- <br/> Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sample_wi.png" class="img-fluid text-center">
+    	</div>
+    <br/> <!-- Empty Line after the image -->
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+			The input to the model is an Enlgish sentence that can contain grammatical errors.
+      The output of the model is the English sentence rewritten to omit any grammatical errors it has.
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/examples.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the Art Model</h2>
+
+        <p>
+          Currently, the state-of-the-art model for grammatical error correction is the T5 (Text-to-Text-Transfer-Transformer) model by Google. This model produces state-of-the-art results for all languages except English.
+          It is a transformer encoder-decoder model, and it comes in different sizes with the smallest base model of 600 million parameters and the largest with 13 billion parameters. 
+          Their base model was inferior to the current SOTA model, but the large model with 11 billion parameters achieved SOTA results in Czech, German, and Russian.
+          Later with a new T5 XXL model with 11B parameters, they were able to achieve SOTA results on all languages that the model was trained on.
+
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sota_t5.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+			We adopted the GECToR model for the GEC problem. The main approach is simplifying the task from sequence generation to sequence tagging. GECToR sequence tagging model architecture is 
+      an encoder made up of a pre-trained BERT-like transformer stacked with two linear layers with softmax layers on the top. The two linear layers are responsible for mistake detection and 
+      error tagging, respectively.
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/model_gector.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      <p>
+        GECToR develops custom token-level transformations to recover the target text by applying them to the source tokens. The
+        transformations increase the coverage of grammatical errors. The edit space consists of mainly basic transformations and some g-transformations.
+        <ul>
+          <li>The basic transformations perform the most common token-level edit operations, such as keeping the current token unchanged, deleting the current token, appending a new token, or replacing the current token with another token.</li>
+          <li>The g-transformations perform task-specific operations, such as changing the case of the current token, merging two consecutive tokens, splitting a token into two, changing the singular nouns to plural form or vice versa, and changing regular verbs to irregular form or vice versa.</li>
+        </ul>
+        <br/>
+
+        Training occurs in 3 stages:
+        <ol>
+          <li>Pre-trained on synthetic errorful data (PIE synthetic data). Pretrained transformers used are BERT, RoBERTa, GPT-2, XLNet, and ALBERT.</li>
+          <li>Fine-tuned on errorful-only corpora (NUCLE, Lang-8, FCE, W&I+Locness datasets)</li>
+          <li>Fine-tuned on the combination of errorful and error-free parallel corpora (NUCLE, Lang-8, FCE, W&I+Locness datasets)</li>
+        </ol>
+        The two fine-tuning stages are important for model performance. The model is trained by Adam optimizer with default hyperparameters. The stopping criteria was 3 epochs of 10k updates each without improvement. The batch size is set to 256 for the pre-training stage and 128 for fine-tuning stages.
+        <br/>
+        The model was further improved by introducing two inference hyperparameters. The first hyperparameter is a positive confidence bias to the probability of $KEEP tag. The second hyperparameter is a sentence-level minimum error probability threshold for the output of the error detection layer. The results of each stage are shown below.
+      </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <p>
+			We proposed some updates to the original model using new approaches, which can help some of its shortcomings and produce better result.
+		</p>
+
+		<h5 class="mt-5">Update #1: Added more data</h5>
+		<p>
+			More data was shown to be beneficial for GEC problems, so we augmented the development data with the gold annotations of multiple shared tasks into the fine-tuning stage.
+		</p>
+
+		<h5 class="mt-5">Update #2: Applied spell-checking in preprocessing</h5>
+		<p>
+			We applied heuristic dictionary levenshtein distance spell-checking techniques on data before training model. Our thought process is to decrease edit space, which could help model detect more grammatical errors.
+      However, after testing, the scores were close with the spell-checked data having slightly better accuracy, but it is due to more imbalance in the data. 
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update2_spell.png" class="img-fluid text-center">
+      </div>
+      So, we decided to continue using the normal dataset (without pre-spellchecking)
+		</p>
+
+
+
+		<h5 class="mt-5">Update #3: Tried different encoder transformers</h5>
+		<p>
+			With the development of more recent transformers than the ones mentioned in the paper, we wanted to try and test the model on different types of transformers. The transformers
+      tested are the ELECTRA-generator model and the ELECTRA-discriminator model. <br/>
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update3_electra.png" class="img-fluid text-center">
+      </div>
+      The intuition of the ELECTRA discriminator model is to distinguish "real" input tokens vs "fake" input tokens generated by another neural network, similar to the discriminator of a GAN.
+      The following are the scores for training both models in stage 2:
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update3_electra2.png" class="img-fluid text-center">
+      </div>
+      Based on the generator and discriminator intuition, it was expected for the ELECTRA-discriminator model to perform better and that was the case. So, we decided to train the 
+      ELECTRA-discriminator model on all 3 stages.
+		</p>
+
+    <h5 class="mt-5">Update #4: Tried different encoder-decoder transformers</h5>
+    <p>
+      We wondered why not use an encoder-decoder transformer but removing the decoder. The paper hypothesizes that encoders from encoder-decoder transformers (NLG) are less useful for GEC models than transformer-encoder models (NLU), but no experiments were done.
+      Therefore, we decided to test the hypothesis using the encoder from the T5 transformer model, since the T5 produces SOTA results in most languages. The T5 architecture:
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update4_t5.png" class="img-fluid text-center">
+      </div>
+      The T5 transformer model is a Text-to-Text Transfer Transformer. One major advantage of the T5 transformer is its versatility. It can be used translation, question answering, and classification. For example, 
+      when used for question answering, it learns in the following way:
+      <br/>
+      <br/>
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update4_t5-2.png" class="img-fluid text-center">
+      </div>
+      <br/>
+      <br/>
+      With that said, we trained the T5 encoder-only model on the second stage, and the initial results were promising. 
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update4_t5-3.png" class="img-fluid text-center">
+      </div>
+      So, we decided to further train the T5 econder-only model on all 3 stages.
+		</p>
+
+    <h5 class="mt-5">Update #5: Tried different optimizers</h5>
+    <p>
+			We decided to try different optimizers, especially with the T5 model where it is recommended to use the Adagrad optimizer. We tested the T5 model and the ELECTRA-discriminator model
+      using the default Adam optimizer, the Adafactor optimizer, and SGD optimizer. We felt that those optimizers are the most probable to produce the best results, and due to the large training
+      times, we decided to stick with these 3 optimizers.
+      <ul>
+        <li>The Adam optimizer was used in the GECToR paper, which has been shown produced good results. </li>
+        <li>The Adafactor optimizer produced slightly better results than the Adam optimizer on the T5 model, but much worse results on the ELECTRA-discriminator model. Also, we observed that the training took less time on both models.</li>
+      </ul> 
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update5_optimizer.png" class="img-fluid text-center">
+      </div>
+      Eventhough the Adafactor produced better results on the T5 model, we decided to stick with the Adam optimizer for rest of tests to be consistent between models and with the paper's scores.
+		</p>
+    
+    <h5 class="mt-5">Update #6: Inference tweaking and tuning</h5>
+    <p>
+      The paper mentions 2 inference tweaks the greatly inlfuence performance:
+      <ol>
+        <li>Confidence Bias: Positive bias to the $KEEP tag</li>
+        <li>Minimum Error probability: Threshold for the output of the error detection layer</li>
+      </ol> 
+      The motive now is that after training the models on the 3 stages, we need the optimal inference tweaks on the output model without overfitting to a specific dataset. We can achieve that by predicting on a shared task then graphing the metric
+      and find the tweaks will results in the maximum score. The following are the resulted tests on the ELECTRA-discriminator modela and T5 model:
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update6_inf.png" class="img-fluid text-center">
+      </div>
+      The following values are the best scores for different models:
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update6_inf2.png" class="img-fluid text-center">
+      </div>
+      Alongside the tweaks mentioned, the number of iterations also influences performance greatly. So we experimented how much does the number of iterations affect performance. 
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/update6_iter.png" class="img-fluid text-center">
+      </div>
+      We can see that ELECTRA model reaches steady performance with the number of interations, so it does not greatly affect the ELECTRA model. However, in the T5, the performance changes greatly when the number of iterations change and there is no clear correlation
+      between them. The steady performance in ELECTRA eases mass adoption and user experience, unlike T5.
+    </p>
+
+    <h5 class="mt-5">Update #7: Tried an ensemble of transformers</h5>
+    <p>
+			In the paper, they achieved better results when using an ensemble of models. So we can do the same while using the ELECTRA discriminator and T5 models with the pretrained models of XLNet and RoBERTa. The main motive behind using an ensemble of
+      models is trying to balance the precision and recall scores. We tried a number of combinations:
+      <ul>
+        <li>ELECTRA + T5</li>
+        <li>ELECTRA + XLNet</li>
+        <li>ELECTRA + RoBERTa</li>
+        <li>T5 + XLNet</li>
+        <li>T5 + RoBERTa</li>
+        <li>ELECTRA + T5 + XLNet + RoBERTa</li>
+      </ul> 
+      The ensemble models produced much better results than single models.
+		</p>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+          After applying the updates proposed, we evaluated the models on the CoNLL2014 shared task and the BEA19 shared task.
+          <ul>
+            <li>CoNLL2014 Shared Task:</li>
+            <div class="img-container" align="center"> <!-- Block parent element -->
+              <img src="resources/images/results_conll.png" class="img-fluid text-center">
+            </div>
+            We can see that our best model is an ensemble of (ELECTRA + T5 + XLNet + RoBERTa). It produces competitive precision scores when compared to the paper's scoress, however, due to the low recall value, the F0.5 score is still far behind the SOTA model and paper's results.
+            <br/><br/>
+            <li>BEA19 Shared Task:</li>
+            Our results were much better on the BEA19 shared task when compared to the CoNLL2014 task. We moved from the 39th place when we first started, to the 15th place with our ensemble of models with the 14th best precision. 
+            <div class="img-container" align="center"> <!-- Block parent element -->
+              <img src="resources/images/results_bea1.png" class="img-fluid text-center">
+            </div>
+            Comparing our scores to the SOTA and GECToR paper, they are really competitive and outperforming some models mentioned in the paper.
+            <div class="img-container" align="center"> <!-- Block parent element -->
+              <img src="resources/images/results_bea2.png" class="img-fluid text-center">
+            </div>
+          </ul>
+		    </p>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <p>
+			Some technical details related to training:
+		</p>
+
+	 	<ul>
+		  <li>Python framework used: PyTorch v1.10 </li>
+		  <li>Training hardware: PC at Machine Learning Lab and Colab Pro</li>
+		  <li>Training must occur on CUDA compatible devices</li>
+		  <li>Training time: ~4 days for stage 1, ~1 days for stage 2, and ~6 hours for stage 3, so around 6 days training all stages</li>
+		  <li>Number of epochs: 30 for stage 1, 10 for stage 2, and 5 for stage 3</li>
+		  <li>Time per epoch usually around 1-3 hours depending on stage</li>
+      <li>Training data must be in specific format to train model (use preprocessing script of GECToR)</li>
+      <li>Prediction data is plain English text</li>
+		  <li>Other python frameworks for running model: 
+        <ul>
+          <li>allennlp v0.8.4</li> 
+          <li>python-Levenshtein v0.12.1</li>
+          <li>transformers v4.11.3</li>
+          <li>scikit-learn v0.20.0</li>
+          <li>sentencepiece v0.1.95</li>
+          <li>overrides v4.1.2</li>
+          <li>numpy v1.19.5</li>
+           
+        </ul>
+      </li>
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+
+	    <p>
+        Now that we know that NLG discriminator networks are very well suited for this task. We want to train and finetune the largest ELECTRA pretrained discriminator model (ELECTRA-1.75M with 335 Million parameters) 
+        as it was shown on other tasks to enhance the score on average by around 5%. We want to also experiment with other discriminator networks other than ELECTRA.
+
+        Moreover, as we learned from our experiments, ELECTRA is much faster to train when compared to other models. Thus, we suggest increasing the tag vocab size from 5000 to 10000 to increase the coverage of errors as explained by Grammarly.
+		</p>
+
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+
+	    <p>
+	    	All references used, which includes papers, datasets, and other sources which we took information from.
+	    </p>
+
+		<ol>
+		  <li><a href="https://aclanthology.org/2020.bea-1.16.pdf">GECToR Paper</a></li>
+		  <li><a href="https://aclanthology.org/N12-1067.pdf">MaxMatch (M2) Format</a></li>
+		  <li><a href="https://github.com/chrisjbryant/errant">ERRANT Framework</a></li>
+		  <li><a href="https://github.com/awasthiabhijeet/PIE/tree/master/errorify">PIE Synthetic Data</a></li>
+		  <li><a href="https://sites.google.com/site/naistlang8corpora/">Lang-8 Dataset</a></li>
+		  <li><a href="https://sterling8.d2.comp.nus.edu.sg/nucle_download/nucle.php">NUCLE Release 3.3 Dataset</a></li>
+		  <li><a href="https://www.cl.cam.ac.uk/research/nl/bea2019st/data/fce_v2.1.bea19.tar.gz">FCE Dataset</a></li>
+		  <li><a href="https://www.cl.cam.ac.uk/research/nl/bea2019st/data/wi+locness_v2.1.bea19.tar.gz">W&I+Locness Dataset</a></li>
+		  <li><a href="https://arxiv.org/pdf/1910.10683v3.pdf">T5 Paper</a></li>
+		  <li><a href="https://arxiv.org/pdf/2003.10555v1.pdf">ELECTRA Paper & Figures</a></li>
+		  <li><a href="https://medium.com/analytics-vidhya/understand-t5-text-to-text-transfer-transformer-9bc1757989ab">T5 Figures</a></li>
+		  <li><a href="https://competitions.codalab.org/competitions/20228#results">BEA19 Shared Task Submissions</a></li>
+		</ol> 
+	  </div>
+	</div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

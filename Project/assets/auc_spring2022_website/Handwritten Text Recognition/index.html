@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Handwritten Text Recognition</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Handwritten Text Recognition</h1>
+        <ul class="list-unstyled">
+          <li>Eman Asem</li>
+          <li>Tarek Khalifa</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			Handwritten text recognition (HTR) is a challenging and important problem because it is a problem faced by many people in countless industries on a daily basis. HTR is the process of converting photos of handwritten documents into plain text that a computer can handle afterwards. HTR is extremely important because it accelerates the processing of physical files and helps digitized documents much faster than humans. Industries that would benefit the most from this technology are ones where they have to read and digitize numerous handwritten documents. This includes hospitals, which have to read prescriptions and companies dealing with insurance papers, places that need to digitize large amounts of handwritten old or current documents, and even students who want to save their handwritten notes to their computers for easier access. Optical character recognition (OCR)’s market size is expected to increase to reach $13.38 billion by 2025 [1], and this is a field where there are still lots of challenges due to the variability when dealing with data coming from different styles of handwriting.
+
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+			The IAM dataset is a dataset that has 13,353 images of british English text written by 657 writers. It has 1,539 pages including 115,320 words. It is a modern dataset that is labeled at the sentence, line, and word levels. We find this dataset extremely useful because it is a big dataset with modern english text which is what we need. This dataset is the most commonly used dataset in the papers we have surveyed as it is in English and has modern handwriting and words.
+
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/datasetexample.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+			This is a sample of the input and output of our model
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/sample.jpg" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <p>
+			In Digital Piter paper, the authors introduce the Peter dataset, which is discussed below, in the datasets section. They also introduce their architecture and test for different models across the peter dataset along with 2 other datasets and compare the obtained results in terms of the 3 metrics discussed above. (CER, WER, and ACC).
+The baseline model architecture used is shown below, with the following baseline metrics:
+
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/graph.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/resultsofsoa.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+			you can find the base model here
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/resnet.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/resultbase.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <p>
+			We made siviral updates on the model to reach our final model
+		</p>
+
+		<h5 class="mt-5">Update #1: Modify ResNet and Squence modeling</h5>
+		<p>
+			In feature extraction, we are using the ResNet model. We changed the kernel used in convolution layer to be 4x4 instead of 3x3 which gave better results. In addition, we used BiGRU instead of BiLSTM in sequence modeling in order to have more effecient results.
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/new.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<p>
+			ResNet modification illustration:
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/new resnet.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+			We have reached better results than the State of ART as the character error rate in the paper is 6.6% while we have reached 6.19%.
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/resulttt.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/valid_cer.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/_valid_acc.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/_valid_wer.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    	<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/_valid_loss.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <p>
+			Here you will detail the details related to training, for example:
+		</p>
+
+	 	<ul>
+		  <li>Programming framework: PyTorch</li>
+		  <li>Training hardware: colab </li>
+		  <li>Training time: 25 hours</li>
+		  <li>Number of epochs: 100</li>
+		  <li>Time per epoch: 15 mins</li>
+		  
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+
+	    <p>
+			In this project, we worked on a model for handwriting text recognition. In the project we used the dataset IAM which has more than 13,000 lines of handwritten text. We took one of the best performing models using ResNet and we have worked to improve on its accuracy which we measure in character error rate. In our project, we have tried changing the feature extraction, loss function and sequence modeling of our model to try and get a sense of what is the best configuration for our model. At each step we changed some parts of the model to try and increase our accuracy using trial and error, and finally, we have reached an error rate of 6.19% which is less than the state of the art which is 6.6%. We have done this by changing our kernel sizes, and sequence modeling while running the model after every change to get a sense of what changes have a positive impact on our model. We aim to continue working on this project and trying different techniques to get the error rate as low as possible. One thing we want to try given enough time is to use other techniques to further improve our model like data augmentation, and trying different datasets to have a broader model. We want to explore the possibility of having the pretrained model work as the engine for a mobile application as it would be immensely helpful to a huge number of people, especially students trying to digitize notes.
+
+		</p>
+
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+
+	    <p>
+	    	List all references here, the following are only examples
+	    </p>
+
+		<ol>
+		  <li><a href="https://arxiv.org/pdf/2103.09354v2.pdf">Handwritting recognition url</a></li>
+		  <li><a href="https://paperswithcode.com/dataset/iam">Dataset URL</a></li>
+		  <li><a href="https://paperswithcode.com/dataset/digital-peter">Digital Peter Model Reference URL</a></li>
+		</ol> 
+	  </div>
+	</div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
