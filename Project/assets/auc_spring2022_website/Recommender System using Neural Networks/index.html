@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Recommender System using Neural Networks model</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Recommender System using Neural Networks model</h1>
+        <ul class="list-unstyled">
+          <li>Omar El-Dessouky</li>
+          <li>Seif Rady</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			Recommendation systems work on creating models that predict user preferences and recommend items/movies based on their preferences to create a more personalized experience.
+			<br>
+			<b>Explicit data</b>: direct and quantitative data collected from users like ratings for movies. The problem is being rare.
+			<br>
+			<b>Implicit data</b>: collected indirectly from user interactions e.g. clicking on a movie. Data is abundant and  allows us to tailor recommendations in real time, with every click and interaction. However,  every interaction is assumed to be positive and we are unable to capture negative preference from users.
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset: MovieLens 20M Dataset</h2>
+
+        <p>
+			MovieLens 20M Dataset is a large dataset which describes ratings for 27278 movies, 138493 user, and a total of 20,000,263 ratings. 
+			<a href="https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset">
+			Check dataset
+			</a>
+			
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/movies.png" class="img-fluid text-center">
+			<p>Source: https://i.imgur.com/oNJnLqU.png</p>
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+			The model takes user ratings for movies as an input and recommends movies for the user based on their ratings.
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/input-output.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <ul>
+			<br>
+			<li>
+				<h5>Neural Collaborative Filtering Implicit Model</h5> 
+				<ul>
+					<li>Produces 86% using hit@10 metric</li>
+					<li>Uses Matrix Factorization</li>
+					<li>Uses Implicit Data</li>
+				</ul>
+			</li>
+			<br>
+			<li>
+				<h5>Neural Collaborative Filtering Explicit Model</h5>
+				<ul>
+					<li>Produces 0.88 using RMSE metric</li>
+					<li>Uses Matrix Factorization</li>
+					<li>Uses Explicit Data</li>
+				</ul>
+			</li>
+		</ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Models from Literature</h2>
+			<h3>
+				NCF Implicit Model
+			</h3>
+			<p>
+				This model takes one hot encoded user and movie vectors and feed them into User Embedding Layer and Movie Embedding Layer Respectively. Then, the concatenated embeddings are mapped into prediction vector.   
+			</p>
+
+			<br/> <!-- Empty Line before the image -->
+			<div class="img-container" align="center"> <!-- Block parent element -->
+				<img src="resources/images/NCF_Implicit.png" class="img-fluid text-center">
+			</div>
+			<br/> <!-- Empty Line after the image -->
+			
+			<h3>
+				NCF Explicit Model
+			</h3>
+			<p>
+				The inputs to the model are the one-hot encoded user and item vectors. Input vectors are fed to the user embedding and item embedding respectively. Then, the model finds the similarity between the embeddings. The Model contains a Dense layer with Relu function for calculating the similarity followed by Dropout Layer followed by another Dense Layer with Relu Function. The final output of the model is the predicted score in a list of movies with corresponding expected rating.
+			</p>
+
+			<br/> <!-- Empty Line before the image -->
+			<div class="img-container" align="center"> <!-- Block parent element -->
+				<img src="resources/images/NCF_Explicit.png" class="img-fluid text-center">
+			</div>
+			<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+		<h5 class="mt-5">Update #1: Used a new model mixing both implicit data and explicit data</h5>
+		 <p>
+			Current Models either use implicit data or explicit data. Our model mixes both implicit and explicit feedback models.
+			<br>
+			For some user, the new model sorts the most recommended movies for this user using both implicit model (Neural Collaborative Filtering model) and the explicit feedback model (Matrix Factorization Model).
+			<br>
+			Weights are then added to each model's output and based on these weights, a new output is generated which is the new recommended list of movies.
+			<br>
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/Hybrid_model.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+		<h5 class="mt-5">Update #2: Hyper-parameter Tuning </h5>
+		<p>
+			We tuned some hyper-parameters such as the following:<br> To change the ratings from explicit values to implicit values, previously, any positive value was considered to be 1 and any movie not rated had a value of 0. We tried different things for this. For example, we converted values higher than 3 to 1 and lower than 3 or not rated to 0.
+		
+		</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+			Using 2,000,000 ratings
+			<ul>
+				<li>
+					The <b>NCF Implicit</b> Model scored <b>81%</b> using hit@10 metric.
+				</li>
+				<li>
+					The <b>NCF Explicit</b> Model scored <b>80%</b> using hit@10 metric.
+				</li>
+				<li>
+					The <b>Hybrid Model</b> scored <b>90%</b> by taking the first 6 movies recommended by the NCF Implicit model and the first 4 movies recommended by the NCF Explicit model using hit@10 metric.
+				</li>
+			</ul>
+		</p>
+		</div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <p>
+			Here you will detail the details related to training, for example:
+		</p>
+
+	 	<ul>
+		  <li>Programming framework: Python, PyTorch, Keras</li>
+		  <li>Training hardware: Google Collab and AWS EC2</li>
+		  <li>Training time: Around 4 hours</li>
+		  <li>Number of epochs: 5 Epochs for NCF Model and 50 Epochs for Matrix Factorization Model</li>
+		  <li>Time per epoch: Around 30 minutes</li>
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+
+	    <p>
+			Merging explicit data increases the probability of a user giving high rate for recommended movies.
+
+			Thus, this model can be better for commercial recommender systems where we want the user to buy an item not only interact with it.
+
+			The merged model balances high hit ratio with better likability index through higher ratings
+
+		</p>
+
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+		<ol>
+		  <li><a href="https://www.kaggle.com/code/jamesloy/deep-learning-based-recommender-systems/notebook">NCF Model URL</a></li>
+		  <li><a href="https://www.kaggle.com/code/rajmehra03/cf-based-recsys-by-low-rank-matrix-factorization">Matrix Factorization Model URL</a></li>
+		  <li><a href="https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset">Dataset URL</a></li>
+		  <li><a href="https://www.hindawi.com/journals/mpe/2016/2535329/">Exploiting Explicit and Implicit Feedback for Personalized Ranking</a></li>
+		  <li><a href="https://towardsdatascience.com/building-a-collaborative-filtering-recommender-system-with-clickstream-data-dffc86c8c65">Collaborative Filtering</a></li>
+		  <li><a href="https://github.com/microsoft/recommenders">Microsoft Recommenders</a></li>
+		  <li><a href="https://www.kaggle.com/code/yesvenkat/knn-recommendation-system/notebook">Recommender Example</a></li>	
+		</ol> 
+	  </div>
+	</div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

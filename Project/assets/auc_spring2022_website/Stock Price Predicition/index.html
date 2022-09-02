@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Stock Price Predicition</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Stock Price Predicition</h1>
+        <ul class="list-unstyled">
+          <li>Mohamed Ellethy #900182961</li>
+          <li>Mark George #900183231</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			Owning stocks could add a lot of value to one’s investment portfolio that could help in building savings and increasing/maintaining wealth, but like any investment one should be aware of the associated risks given the high volatility of the stock market. There are several trading approaches that could be followed by the investor being mainly short term trading and long term investment. Short term trading is usually defined as holding a stock for no more than a year, could be even a few hours, and focusing on the profit potential associated with volatility. On the other hand, long term investment is defined as holding a stock for more than a year and they tend to exhibit much lower volatility, and are more reasonable when it comes to taking decisions about investments such as the company’s performance or future plans. 
+
+      Stock price prediction is widely acknowledged as a challenging undertaking due to the extraordinarily unpredictable nature of financial markets. However, to make money or predict the trend, many market players and scholars use statistical, econometric, and even neural network models to forecast stock prices. Accurate stock market models can give investors the tools they need to make better decisions. These models can aid traders in minimizing investment risk and identifying the most profitable stocks. One of the most important aspects of temporal data forecasting is selecting the most promising algorithm for modeling and predicting a specific phenomena.We will explore different models that are used to predict stock prices and use evaluation metrics to find the most effective model that predicts the uncertainty of stock prices. 
+
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+			Old Stock prices joined with tweets sentiment score on date
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/inputExample.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Example</h2>
+
+        <p>
+		
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/output.jpg" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <p>
+          Comparing with four widely used models for forecasting Deep Convolutional Generative Adversarial Network outperforms others in the evaluation metrics making it the best
+          model. 
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/stateOfArt.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/originalModel.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <p>
+          
+          
+          
+          
+		</p>
+
+		<h5 class="mt-5">Update #1: 1. Feature Engineering: we combined multiple features in this model, which better represent the problem.In addition, the data is normalized in order to have data in close range. (A repeated suggested change in the feedback )</h5>
+		<p>
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/featureEngineering.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+		<h5 class="mt-5">Update #2: We added another technique/predictor that has shown to have a very high influence on stock market prices and it mainly focus on tracking tweets of influencers such as Elon Musk, that I’ve personally witnessed his huge impact in the most recent incident when he tweeted his dog “Floki” with a caption “Floki Santa”, and we’ve seen the cryptocurrency name “Santa Floki” sky-rocketing in the next few hours to almost 100x, making new multi-millionaires overnight. </h5>
+		<p>
+			details here
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/proposedModel.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <h5 class="mt-5">Update #3: Hyperparameter Tuning: finding the best hyperparameters by trial-error method which increased the model performance and predictability. 
+    </h5>
+		<p>
+			The final model architecture. 
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/modelPlot.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+			<br>Old RMSE: 8.34
+
+
+      <br>New RMSE:  1.64
+
+
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/resultsStockPrediction.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <p>
+		
+		</p>
+
+	 	<ul>
+		  <li>Programming framework: Keras </li>
+		  <li>Training hardware: Google colab </li>
+		  <li>Training time: 5 minutes</li>
+		  <li>Number of epochs: 5</li>
+		  <li>Time per epoch: AVG time  56 seconds</li>
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+
+	    <p>
+			As expected, introducing a new forecasting technique improved the accuracy of the model. The added feature, tweet analysis, proofs that news forecasting is as important as quantitive analysis. In addition, results illustrates the importance of keeping an eye on latest tweets and news for securities they own.  
+		</p>
+
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+
+	    <p>
+	    	List all references here, the following are only examples
+	    </p>
+
+		<ol>
+		  <li><a href="https://doi.org/10.1016/j.neucom.2020.04.086">Yusheng Huang, Yelin Gao, Yan Gan, Mao Ye, A new financial data forecasting model using genetic algorithm and long short-term memory network, Neurocomputing, Volume 425, 2021, Pages 207-218, ISSN 0925-2312, </a></li>
+		  <li><a href="https://www.sciencedirect.com/science/article/pii/S0957417421009441">Weiwei Jiang,Applications of deep learning in stock market prediction: Recent progress,
+        ExpertSystemswithApplications,Volume184,2021,115537,ISSN0957-4174
+        </a></li>
+		  <li>Nosratabadi, Saeed & Mosavi, Amir & Duan, Puhong & Ghamisi, Pedram & Ferdinand, Filip & Band, Shahab & Reuter, Uwe & Gama, João & Gandomi, Amir. (2020). Data Science in Economics: Comprehensive Review of Advanced Machine Learning and Deep Learning Methods. 10.20944/preprints202010.0263.v1. 
+        Feng, Fuli & Chen, Huimin & He, Xiangnan & Ding, Ji & Sun, Maosong & Chua, Tat-Seng. (2019). Enhancing Stock Movement Prediction with Adversarial Training. 5843-5849. 10.24963/ijcai.2019/810. 
+        </li>
+      <li>Kim, Raehyun & So, Chan & Jeong, Minbyul & Lee, Sanghoon & Kim, Jinkyu & Kang, Jaewoo. (2019). HATS: A Hierarchical Graph Attention Network for Stock Movement Prediction.</li>
+      <li><a href="https://www.kaggle.com/faressayah/stock-market-analysis-prediction-using-lstm/comments">Bao W, Yue J, Rao Y. A deep learning framework for financial time series using stacked autoencoders and long-short term memory. PLoS One. 2017 Jul 14;12(7):e0180944. doi: 10.1371/journal.pone.0180944. PMID: 28708865; PMCID: PMC5510866.
+        Kaggle.com. 2022. 📊Stock Market Analysis 📈 + Prediction using LSTM.</a></li>
+      <li><a href="https://www.kaggle.com/faressayah/stock-market-analysis-prediction-using-lstm/comments">Faressayah. (2022, February 16). 📊stock market analysis 📈 + prediction using LSTM. Kaggle</a></li>
+      <li><a href="https://coinmarketcap.com/currencies/santa-floki/">“Santa Floki Price Today, Hohoho to USD Live, Marketcap and Chart.” CoinMarketCap</a></li>
+
+		</ol> 
+	  </div>
+	</div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project Title Here</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../home.html">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">SENTIMENT CLASSIFICATION</h1>
+                <ul class="list-unstyled">
+                    <li>Abdelrahman Elgammal - 900181126</li>
+                    <li>Abdelrahman Abouzeid - 900181004</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Problem Statement</h2>
+                <p>
+                    Our task is to build a fine-grained sentiment classification model using BERT to evaluate people’s perception of a product, service, review, etc...
+                </p>
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/statement_problem.jpg" class="img-fluid text-center">  <!-- put  first image -->
+                </div>
+                <br /> <!-- Empty Line before the image -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Dataset</h2>
+
+                <p>
+                    We have used the ‘IMDb’ dataset on ‘paperswithcode’, which is a binary sentiment analysis dataset consisting of 50,000 reviews from the internet movie database (IMDb) labeled as positive or negative.
+                    <br />
+                    Other Datasets used for deploying the model:
+                    <br />
+                    SST5 - Stanford Sentiment Treebank (Fine-Grained Classification)
+                    <br />
+                    SST2 - Stanford Sentiment Treebank (Binary Classification
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Input/Output Examples</h2>
+                <p>
+                    From 0_10.txt from the IMDb Dataset "...The sign of a good movie is that it can toy with our emotions. This one did exactly that. ...".
+                    <br />
+                    --> This will be labled as Positive.
+                    <br />
+                    From 0_2.txt from the IMDb Dataset “...Once again Mr. Costner has dragged out a movie for far longer than necessary ...”.
+                    <br />
+                    --> This will be labled as Negative.
+                    <br />
+                    From 000157 from the SST5 Dataset “...Dense with characters and contains some thrilling moments ...”.
+                    <br />
+                    --> This will be labled as Neutral.
+                </p>
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/faces.jpg" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">State of the art</h2>
+
+                <p>
+                    state of the art accuracies on SST-5 and SST-2 Datasets.
+                </p>
+
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/rank.jpg" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Orignial Model from Literature</h2>
+
+                <p>
+                    Fine-Grained sentiment Classification Model using BERT (Bidirectional Encoder Representation from Transformers).
+                    <br />
+                    Prior to the first stage involves some preprocessing on the text which includes things like canonicalization (which is basically to standardize the text by removing punctuation, making everything lowercase, etc.), tokenization (breaking down words into prefix, root, and suffix), and adding special tokens. Then this is given to first stage which is BERT embedding which we spoke about earlier which is used to compute the sequence embedding. This is then followed by a dropout regularization layer which makes sure that the model is sized correctly in terms of parameters, etc. to avoid underfitting/overfitting. It is finally followed by the softmax activation function which converts all the values into probabilities and then the highest value probability is the one selected as the outcome. The figure below shows the model structure.
+                </p>
+
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/bert.jpg" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/model.jpg" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Proposed Updates</h2>
+
+                <h5 class="mt-5">Update #1: deploying the model on IMDb dataset </h5>
+                <p>
+                    We have deployed the model on IMDb dataset which required us to fully modify the data.py in the data preprocessing stage, changing the model from taking input as tree-based format to text 'uint8' format and training the model on 50,000 text reviews samples.
+                    <br /> 
+
+                </p>
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/bert-update.png" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+
+                <h5 class="mt-5">Update #2: Fine-tuning hyper-parameters</h5>
+                <p>
+                    In this stage we have deployed the model on diffrent hyper-parametrs:
+                    <br />
+                    BERT-Base, BERT-Large,
+                    Diffrent Batch sizes,
+                    Diffrent number of epochs,
+                    Freezing layers,
+                    Diffrent optimizers & loss functions
+                    <br /> <!-- Empty Line before the image -->
+                    <br /> <!-- Empty Line before the image -->
+                    And the best accuracies achieved was using the following hyper-parameters:
+                    <br /> <!-- Empty Line before the image -->
+                    BERT-LARGE-uncased
+                    <br /> <!-- Empty Line before the image -->
+                    Batchsize = 32
+                    <br /> <!-- Empty Line before the image -->
+                    No. of epochs = 6
+                    <br /> <!-- Empty Line before the image -->
+                    freezing layers = 0
+                    <br /> <!-- Empty Line before the image -->
+                    optimizer = Adam
+                    <br /> <!-- Empty Line before the image -->
+                    Loss Function = Cross-Entropy.
+                </p>
+                <br /> <!-- Empty Line before the image -->
+                
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Results</h2>
+
+                <p>
+                    We have trained our model for 5-10 epochs on both BERT BASE and BERT LARGE which gave us some promising results reaching accuracies of ~84% on both BERT BASE and BERT LARGE.
+                    <br />
+                    Although, this is not on par with the state-of-the-art results for models performing sentiment classification on the IMDb dataset which is as high as ~97% (refer to figure below).
+                    <br />
+                </p>
+
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/results2.png" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+                <br /> <!-- Empty Line before the image -->
+                <div class="img-container" align="center">
+                    <!-- Block parent element -->
+                    <img src="resources/images/results3.png" class="img-fluid text-center">
+                </div>
+                <br /> <!-- Empty Line after the image -->
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Technical report</h2>
+                <ul>
+                    <li>Programming framework: pytorch</li>
+                    <li>Training hardware: colab</li>
+                    <li>Training time: 2.3 hours</li>
+                    <li>Number of epochs: 6 epochs</li>
+                    <li>Time per epoch: 23min.</li>
+                    <li>Number of training text reviews: 25,000</li>
+                    <li>Number of testing text reviews: 25,000</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">Conclusion</h2>
+
+                <p>
+                    Final comments:
+                    <br />
+                </p>
+                <p>
+                    Overall, it is obvious that there are other models that are better for sentiment classification on the IMDb dataset. This can be due to our model being more adapted to the SST dataset, which can be resolved with hyperparameter tuning.
+                    <br />
+                    Due to its complexity, the model takes too much time in training, and we don’t have enough computing and memory resources. This makes hyperparameter tuning very difficult.
+                    <br />
+                </p>
+                <p>
+                    Future work:
+                    <br />
+                </p>
+                <p>
+                    Unfortunately, we were not able to implement the unsupervised learning section of our project and we want to continue working on that even after the course is done.
+                    <br />
+                    Further tune the hyper-parameters taking inspiration from similar models.
+                    <br />
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h2 class="mt-5">References</h2>
+
+                <p>
+                    List all references here, the following are only examples
+                </p>
+
+                <ol>
+                    <li><a href="https://paperswithcode.com/sota/sentiment-analysis-on-sst-5-fine-grained">Sentiment Analysis on SST-5 Fine-grained classification url</a></li>
+                    <li><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://arxiv.org/pdf/1910.03474v1.pdf">Fine-grained Sentiment Classification using BERT URL</a></li>
+                    <li><a href="https://www.techtarget.com/searchenterpriseai/definition/BERT-language-model">BERT language model URL</a></li>
+                    <li><a href="https://huggingface.co/blog/encoder-decoder">Transformers-based Encoder-Decoder Models URL</a></li>
+                    <li><a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews ">IMDb dataset URL</a></li>
+                    <li><a href="https://github.com/prrao87/fine-grained-sentiment ">BERT main model repo URL</a></li>
+                    <li><a href="https://paperswithcode.com/sota/sentiment-analysis-on-sst-2-binary">SST-2 dataset URL</a></li>
+                    <li><a href="https://paperswithcode.com/paper/fine-grained-sentiment-classification-using">Model used main repo</a></li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.slim.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
