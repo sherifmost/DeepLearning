@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project Title Here</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Food Classification</h1>
+        <ul class="list-unstyled">
+          <li>Fatima Hassan</li>
+          <li>Menna Ghalwash</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			The aim of this project is to input an image of an item of food and get the name as an output using machine learning. Since digital technologies integrated itself in the everyday life of humans, the food recognition system will integrate itself as well with various functions to help people in their daily lives.
+
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+          Food images (food 101): 
+          </br>
+          It contains numerous images of dishes in 101 categories; each category contains 1000 images of the food with resolution of 384x384x3.
+
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/Food-101-dataset.jpeg" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image --> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <!-- <p>
+			Place few examples here to illustrate the dataset and your problem statement, add your model images below
+		</p> -->
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/ex1.png" class="img-fluid text-center">
+      </div>
+    </br>
+      <div class="img-container" align="center"> 
+          <img src="resources/images/ex2.png" class="img-fluid text-center">
+      </div>
+    </br>
+      <div class="img-container" align="center">
+          <img src="resources/images/ex3.png" class="img-fluid text-center">
+      </div>
+    </br>
+      <div class="img-container" align="center">    
+          <img src="resources/images/ex4.png" class="img-fluid text-center">
+      </div>
+    </br>
+      <div class="img-container" align="center">
+          <img src="resources/images/ex5.png" class="img-fluid text-center">
+      </div>
+    </br>
+      <div class="img-container" align="center">
+          <img src="resources/images/ex6.png" class="img-fluid text-center">
+      </div>    
+          
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <!-- <p>
+			State here state of the art models and their accuracies, you might need to do this by including images of tables
+		</p> -->
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/st.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Original Model from Literature</h2>
+      </br>
+
+        <p>
+          As illustrated in the model training procedure, the model is expanded in order to avoid overfitting; however, we believe that this is not enough to avoid overfitting and other techniques can be used. While researching, we read about regularisation by using drop out for example, this idea was also recommended in the model’s description.
+		    </br>
+      </br>
+        Also more augmentation can be tried on test images for better results.
+
+        </br>
+      </br>
+        It is important splitting the dataset and testing on splitted classes; however, it would also be better to try to fine tune on the entire dataset.
+        
+        </br>
+      </br>
+        Deal with unknown dishes: we want to find a way to classify dishes that do not belong to any of the categories that we have. Maybe we would create a new class for unknown dishes and train them along the way or find similarities between them and known dishes and point out that they are similar but not the same.
+      </br> 
+    </br>
+    Hyperparameters:
+    </br>
+      - ReLU
+    </br>
+      - L2 Regularization
+    </br> 
+      - Dropout 
+    </br>
+      - Softmax
+    </br>
+      - Categorical crossenthropy 
+    </br>
+      - 2D pooling
+    </br>
+      - SGD
+    </br>
+  
+      </p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/modd.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/res.png" class="img-fluid text-center">
+    </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <!-- <p>
+			Add all the model updates you made here, need as many images as you wish
+		</p> -->
+
+		<h5 class="mt-5">Data augmentation</h5>
+		<p>
+			     What did we change?
+    </br>
+        - saturation 
+      </br>
+        - rotation
+      </br>
+        - mirror 
+      </br>
+        - zoom 
+      </br>
+        - height & width
+      </br>
+        - brightness 
+      </br>
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/exx1.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/exx2.png" class="img-fluid text-center">
+    </div>
+    <br/> <!-- Empty Line after the image -->
+    <div class="img-container" align="center"> <!-- Block parent element -->
+      <img src="resources/images/exx3.png" class="img-fluid text-center">
+      </div>
+      <br/> <!-- Empty Line after the image -->
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/exx4.png" class="img-fluid text-center">
+    </div>
+    <br/> <!-- Empty Line after the image -->
+
+		<h5 class="mt-5">Hyperparameter Tuning</h5>
+		<p>
+			We tried out differnent hyperparameters for the model in order to diistinguish the best combination.
+    </br>
+    These hyperparameters included changing activation functions, loss functions, optimizers,...etc
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/hyperparams.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <h5 class="mt-5">Ensemble Learning</h5>
+		<p>
+			Ensemble is the process of combining multiple models resulting in one reliable model to improve the performance.
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/ensemble.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="container">
+    <h5 class="mt-5">Different types of CNNs</h5>
+		<p>
+			We first tried out VGG
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/VGG.png" class="img-fluid text-center">
+          </br>
+          <img src="resources/images/vggarch.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+    
+    
+
+      <p>
+        Then we tried out Resnet
+      </p>
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+            <img src="resources/images/Resnet.png" class="img-fluid text-center">
+          </br>
+          <img src="resources/images/resnetarch.png" class="img-fluid text-center">
+        </div>
+        <br/> <!-- Empty Line after the image -->
+
+
+        <p>
+          Finally InceptionV3
+        </p>
+        <br/> <!-- Empty Line before the image -->
+          <div class="img-container" align="center"> <!-- Block parent element -->
+              <img src="resources/images/inception.png" class="img-fluid text-center">
+            </br>
+            <img src="resources/images/incarch.png" class="img-fluid text-center">
+          </div>
+          <br/> <!-- Empty Line after the image -->
+
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+        <p>
+			We will illustrate our results after every thing we tried out. 
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+        <p>Results after changing the hyperparameters:</p>
+      		<img src="resources/images/res1.png" class="img-fluid text-center">
+          </br>
+          </br>
+          </br>
+      <img src="resources/images/res2.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <p>Results after Ensemble learning</p>
+      		<img src="resources/images/res3.png" class="img-fluid text-center">
+    	</div>
+
+      <div class="img-container" align="center" style="font-weight: bold"> <!-- Block parent element -->
+        <p>Results after trying different types of CNNs</p>
+        <p>VGG16</p>
+      		<img src="resources/images/vgg1.png" class="img-fluid text-center">
+          </br>
+          </br>
+          </br>
+          <p>VGG19</p>
+          <img src="resources/images/vgg2.png" class="img-fluid text-center">
+          </br>
+          </br>
+          </br>
+          <p>Resnet50</p>
+          <img src="resources/images/renet50.png" class="img-fluid text-center">
+          </br>
+          </br>
+          </br>
+          <p>Resnet101</p>
+          <img src="resources/images/resnet101.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      <h5 class="mt-5">Freezing Layers</h5>
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+            <img src="resources/images/Freezing.png" class="img-fluid text-center">
+        </div>
+        <br/> <!-- Empty Line after the image -->
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+        <!-- <p>
+			Here you will detail the details related to training, for example:
+		</p> -->
+
+	 	<ul>
+		  <li>Programming framework:</li>
+      <p>
+        The code was written in python, TensorFlow. 
+      </p>
+		  <li>Training hardware:</li>
+      <p>
+        We used to run it on google colab.
+      </p>
+		  <li>Training time</li>
+      <p>
+        Long training time (10+ hours, 50 min per epoch) since we used to deal with a large dataset.
+      </p>
+		  <li>Number of epochs</li>
+      <p>
+          We didn't have a specific number of epochs to run with everytime, it used to depend on how many classes we are training on from the dataset and other factors.
+      </br>
+          We tried out:
+    </br>
+          3 epochs with 3, 50 and 101 classes.
+        </br>
+          5 epochs with 3, 50 and 101 classes.
+        </br>
+          7 epochs with 101 classes.
+        </br>
+          12 epochs with 101 classes.
+        </br>
+          20 epochs with 101 classes.
+      </p>
+		  <li>Time per epoch</li>
+      <p>
+        Depended on the number of classes used; however, the average was 1 hour per epoch.
+      </p>
+		  <li>Any other important detail or difficulties</li>
+      <p>
+        GPU Backend problems -> time limitation.
+      </br>
+        Generally handling a large dataset (101000 image and 202000 after augmentation)
+      </p>
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+
+	    <!-- <p>
+			Conclusion and future work (including lessons learned and interesting findings
+		</p> -->
+    <div class="img-container" align="center"> <!-- Block parent element -->
+      <p>Difference between our model and the original model</p>
+        <img src="resources/images/final.png" class="img-fluid text-center">
+    </div>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+	    <!-- <p>
+	    	List all references here, the following are only examples
+	    </p> -->
+
+		<ol>
+		  <li><a href="https://viso.ai/deep-learning/vgg-very-deep-convolutional-networks/">VGG Convolution Network</a></li>
+		  <li><a href="https://www.sciencedirect.com/topics/computer-science/residual-network">Residual Network</a></li>
+		  <li><a href="https://www.mathworks.com/help/deeplearning/ref/inceptionv3.html;jsessionid=9329977f2c7d812ea0776613c649">Inception V3</a></li>
+      <li><a href="https://www.analyticsvidhya.com/blog/2021/06/ensemble-deep-learning-an-ensemble-of-deep-learning-models/"> Ensemble Learning</a></li>
+		  <li><a href="https://iq.opengenus.org/different-types-of-cnn-models/">Different Types of CNN models</a></li>
+		  <li><a href="https://cloud.google.com/tpu/docs/inception-v3-advanced">Inception V3</a></li>
+      <li><a href="https://iq.opengenus.org/resnet50-architecture/">Resnet50 Architecture</a></li>
+		  <li><a href="https://www.analyticsvidhya.com/blog/2018/10/understanding-inception-network-from-scratch/">Inception Network</a></li>
+      <li><a href="https://pdfs.semanticscholar.org/59c7/b50b32f58c6b8377abb49a27992f83864dcd.pdf?_ga=2.31254655.1142802011.1644592954-1594897687.1644429980">Research Paper</a></li>
+      <li><a href="http://cs230.stanford.edu/projects_fall_2020/reports/55825128.pdf">Research Paper</a></li>
+      <li><a href="https://arxiv.org/pdf/1606.05675.pdf">Research Paper</a></li>
+      <li><a href="https://arxiv.org/pdf/2110.07402v4.pdf">Research Paper</a></li>
+      <li><a href="https://arxiv.org/pdf/2106.11776.pdf">Research Paper</a></li>
+      <li><a href="https://neptune.ai/blog/data-augmentation-in-python">Research Paper</a></li>
+      <li><a href="https: //www.kaggle.com/theeyeschico/food-classification-using-tensorflow/notebook">Research Paper</a></li>
+      <li><a href=" https: //www.kaggle.com/theimgclist /multiclass-food-classification-us ing-tensorflow">Research Paper</a></li>
+
+
+      
+      
+      
+      
+  
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+
+
+
+		</ol> 
+	  </div>
+	</div>
+
+  </div>
+</div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

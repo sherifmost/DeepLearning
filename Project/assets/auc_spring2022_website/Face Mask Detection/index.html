@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Face Mask Detection</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Face Mask Detection</h1>
+        <ul class="list-unstyled">
+          <li>Hazem Fakhry</li>
+          <li>Adham Meligy</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+			During the past few years of the COVID-19 pandemic, medical face masks have become of increasing importance to combat the rapid spread of the virus. 
+      As a result, organizations and governments have started requiring individuals to be wearing face masks in numerous places, occasions, and circumstances. 
+      Therefore, it is the role of software engineers to automate the checking process of face masks. 
+      In this proposed project, we will create a face mask detection system, where it would output whether a person is wearing a face mask or not.
+      It would also identify if the mask is not worn properly. This system can be of high value and be used in numerous ways such as: disallowing entry or enforcing fines on unmasked individuals.
+		</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+          For our dataset, we merged considerable parts of datasets to create a combined, balanced dataset. 
+          We used a dataset of size 6.03 GBs containing 20,000+ images of correctly masked, incorrectly masked, and 
+          unmasked human faces. 
+          The datasets which we used to form our combined dataset were:
+		</p>
+
+    <ul>
+      <li>
+        Human Faces by Ashwin Gupta
+      </li>
+      <li>
+        MaskedFace-Net (CMFD)
+      </li>
+      <li>
+        MaskedFace-Net (IMFD)
+      </li>
+    </ul>
+
+    <p>
+      In our dataset, we ensured to divide our dataset evenly between the three classes 
+      and contain a distribution of images of different ethnicities, ages, and genders in order to ensure a 
+    balanced training and validation dataset.
+    </p>
+
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/dataset.jpg" class="img-fluid text-center" width = 1200>
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+          Our proposed system takes an image of a person as an input, and outputs one of three classes: 
+          whether the person is wearing a mask correctly, wearing a mask incorrectly, or not wearing a mask at 
+          all.
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/examples.png" class="img-fluid text-center" width = 1200>
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+        <p>
+          CNN models are widely considered as the go-to models for image classification problems. 
+          Below is a table comparing the different CNN architectures, showing the accuracy, size, and training 
+          time of different CNN architectures. 
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/SOTA_results.png" class="img-fluid text-center" width = 800>
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+          CNN stands for Convolutional Neural Network which is a specialized neural network for processing 
+          data that has an input shape like a 2D matrix like images. 
+          CNN models build a network with the neurons connected together in a 2D structure, and then the 
+          output is processed and produced. 
+          CNN's are typically used for image detection and classification as they process data in a 
+          grid-like structure, making them more useful for computer vision applications. 
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/generic.png" class="img-fluid text-center" width = 800>
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <br/> <!-- Empty Line after the image -->
+
+      <p>
+        The model uses a pre-trained  ResNet50 Convolutional Neural Net model, and uses transfer learning to learn weights of only the last layer of the net. 
+        The use of transfer learing would make use of a pre-trained model to give the model better generalization, while saving training time in less epochs. 
+        ResNet-50 is a CNN model that has a depth of 50. It is considered as a modern convolutional neural network that allows for deeper networks. 
+        It also has pooling and works on the TensorFlow framework. 
+        This model produced an accuracy of 98% using the Face Mask Detection dataset which is a set of 7000+ images labeled as withmask and withoutmask. 
+      </p>
+          
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+          <img src="resources/images/resnet50.png" class="img-fluid text-center">
+        </div>
+      <br/> <!-- Empty Line after the image -->
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+		<h5 class="mt-5">Update #1: Multinomial Classification</h5>
+		<p>
+			All of the above models only produce binary outputs (wearing a mask / not wearing a mask). 
+      Our proposed update is creating a model which identifies whether a mask is properly worn or not, in addition to the two base outputs. 
+      This means that our tentative model would have three possible outputs, which are: mask worn properly, mask not worn, mask worn improperly. 
+		</p>
+		<!-- <br/> Empty Line before the image -->
+	    <!-- <div class="img-container" align="center"> Block parent element -->
+      		<!-- <img src="resources/images/update1.jpeg" class="img-fluid text-center"> -->
+    	<!-- </div> -->
+    	<!-- <br/> Empty Line after the image -->
+
+		<h5 class="mt-5">Update #2: Using Ensemble Learning</h5>
+		<p>
+			Since there exists several CNN architectures, which would give valid, accurate results, we have decided to use Ensemble Learning. 
+      We would use three CNN architectures ensembled in the hopes of achieving a better predictive performance than if only one architecture was used. 
+      The three CNN models which we inteded on using were: 
+
+      <li>ResNet-50</li>
+      <li>DenseNet-201</li>
+      <li>VGG-16</li>
+
+      These models were chosen as they provide high accuracy while having a small model size and a relatively low training time.
+		</p>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/ensemble.jpeg" class="img-fluid text-center" width = 900>
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+
+      <h5 class="mt-5">Update #3: Using a Larger Training Dataset</h5>
+      <p>
+	      In the original model reference, a relatively small, bi-class dataset was used with a size of 174.7 MB. 
+        To better train our model for a better generalization, we intend to use a much larger 6.03 GBs dataset which includes the three classes of images.
+      </p>
+
+      <h5 class="mt-5">Update #4: Early Stopping and Callbacks</h5>
+      <p>
+        In order to prevent overfitting of our model and to ensure better generalization, we used early stopping during training of our models. 
+        This is especially useful since we use an iterative model. 
+        In addition, callbacks helped us ensure that we get the best possible result from our training.
+      </p>
+
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+  		    <img src="resources/images/early_stopping.png" class="img-fluid text-center">
+	      </div>
+	    <!-- <br/> Empty Line after the image -->
+
+      <h5 class="mt-5">Update #5: Data Augmentation</h5>
+      <p>
+        To further prevent overfitting, we used data augmentation on our dataset such as rotation of the image and zoom. 
+        This technique acts as a regularizer by increasing the data input to our model training by modifying the inputs or generating new data.
+      </p>
+
+      <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+          <img src="resources/images/augmentation.png" class="img-fluid text-center">
+        </div>
+      <!-- <br/> Empty Line after the image -->
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Results</h2>
+
+    <p>
+			In the ensembling, we used three CNN architectures that produced similar, very accurate results on our dataset. 
+			We used several metrics to judge the performance of our models: training loss, validation loss, and validation accuracy. 
+      Below are the tables showing the performance of each of the architectures before ensembling them together. 
+      The DenseNet model provided the highest accuracy out of the three models, and as their outputs are averaged together, 
+      our final model would give an even better predictive performance. 
+      These figures show an improvement to the original architecture, which had an accuracy of only 98%, where our models exceeded 99%.
+		</p>
+
+    <h5 class="mt-5" align = "center">Model #1: ResNet-50</h5>
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/resnet_table.png" class="img-fluid text-center"
+          width = "600"
+          >
+    	</div>
+
+      <h5 class="mt-5" align = "center">Model #2: DenseNet-201</h5>
+      <br/> <!-- Empty Line after the image -->
+      <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/densenet_table.png" class="img-fluid text-center"
+        width = "600"
+        >
+     </div>
+
+     <h5 class="mt-5" align = "center">Model #3: VGG-16</h5>
+     <br/> <!-- Empty Line after the image -->
+     <div class="img-container" align="center"> <!-- Block parent element -->
+      <img src="resources/images/vgg_table.png" class="img-fluid text-center"
+      width = "600"
+      >
+   </div>
+
+   <br/> <!-- Empty Line after the image -->
+   <br/> <!-- Empty Line after the image -->
+
+    <p>
+      In addition, confusion matrices were used for each model architecture to track the models' predictions relative to the ground truth. 
+      As shown by the figures below, all three models gave very accurate predictions with a very slight variation in their accuracy.
+    </p>
+
+    <div class= "row">
+      <div class= "column">
+        <h5 class="mt-5" align = "center">Model #1: ResNet-50</h5>
+        <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+	        <img src="resources/images/matrix1.png" class="img-fluid text-center"
+            width = "350"
+          >
+        </div>
+      </div>
+
+      <div class= "column">
+        <h5 class="mt-5" align = "center">Model #2: DenseNet-201</h5>
+        <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+          <img src="resources/images/matrix2.png" class="img-fluid text-center"
+            width = "350"
+          >
+        </div>
+      </div>
+
+      <div class= "column">
+        <h5 class="mt-5" align = "center">Model #3: VGG-16</h5>
+        <br/> <!-- Empty Line before the image -->
+        <div class="img-container" align="center"> <!-- Block parent element -->
+          <img src="resources/images/matrix3.png" class="img-fluid text-center"
+            width = "350"
+          >
+        </div>
+      </div>
+
+    </div>
+      
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Technical report</h2>
+
+    <ul>
+		  <li><strong>Training Frameworks:  </strong>fast.ai, Keras</li>
+		  <li><strong>Epochs Per Model: </strong>4 epochs</li>
+      <li><strong>Total Epochs: </strong>12 epochs</li>
+		  <li><strong>Time Per Epoch: </strong>~14 minutes</li>
+      <li><strong>Total Training Time: </strong>~168 minutes</li>
+		  <li><strong>Batch Size: </strong>32</li>
+      <li><strong>Ratio of Training:Validation Data: </strong>4:1</li>
+      <li><strong>Difficulties Faced: </strong>
+        <ul>
+          <li>Slow internet connection in Egypt made uploading a dataset very difficult</li>
+          <li>GPU runtime disconnecting in Colab due to reaching usage limits</li>
+        </ul>
+      </li>
+
+		</ul> 
+      </div>
+    </div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">Conclusion</h2>
+	    <p>
+			We are very pleased with the high accuracy our model has reached and its performance. 
+      During the course of the project, we learned a lot more about the practical implementation of deep learning model and got exposed to things we would not have known otherwise. 
+      We needed to make frequent changes to the model due to the difficulties that we faced in different milestones; 
+      this made us research for different solutions to solve these difficulties and come up with more creative soltuions.
+
+      <h5>Lessons Learned</h5>
+      <li>New frameworks such as fast.ai</li>
+      <li>Checkpoints and callbacks</li>
+      <li>Different data loading techniques</li>
+      <li>Ensemble learning</li>
+
+      <br/> <!-- Empty Line after the image -->
+
+      <h5>Future Plans</h5>
+      <li>Training the model to classify coloured masks in addition to the medical face masks</li>
+
+		</p>
+
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-lg-12 text-left">
+	    <h2 class="mt-5">References</h2>
+
+		<ol>
+		  <li><a href="https://www.kaggle.com/code/arbazkhan971/face-mask-detection-using-cnn-98-accuracy/notebook">Model Reference URL</a></li>
+		  <li><a href="https://drive.google.com/file/d/1AY0hcCI7Do0v72JdxPBn_xcHCQ_-jqfk/view?usp=sharing">Dataset URL</a></li>
+      <li><a href="https://www.kaggle.com/datasets/ashwingupta3012/human-faces?select=Humans">Human Faces by Ashwin Gupta</a></li>
+      <li><a href="https://github.com/cabani/MaskedFace-Net">MaskedFace-Net</a></li>
+      <li><a href="https://github.com/fastai/fastai">fast.ai Source</a></li>
+      <li><a href="https://www.youtube.com/watch?v=wkwtIeq9Ljo">What are Callbacks, Checkpoints and Early Stopping in Deep Learning?</a></li>
+      <li><a href="https://www.kaggle.com/code/phoenix9032/fastai-ensemble-tutorial-aerial-cactus/notebook">Fastai Ensemble Tutorial -Aerial Cactus</a></li>
+
+		  
+		</ol> 
+	  </div>
+	</div>
+
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
