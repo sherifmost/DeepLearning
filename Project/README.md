@@ -6,7 +6,7 @@ The course project is an opportunity for you to apply what you have learned in c
 
 You can check the past project websites:
 
-* [Alexandria University - CS 435 Deep Learning - Spring 2020](https://raw.githack.com/sherifmost/DeepLearning/master/Project/assets/au_spring2020_website/home.html)
+* [Alexandria University - CS 435 Deep Learning - Spring 2020](https://raw.githack.com/sherifmost/DeepLearning/master/Project/assets/auc_spring2022_website/home.html)
 
 ## 2 - Project Timeline
 
