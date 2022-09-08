@@ -21,7 +21,7 @@ Perhaps the most important delivery since all your project work depends on it. Y
 15. **If your proposal is related to your graduation project (or thesis), point out the differences that will be made between this problem statement and your graduation project (thesis) problem statement (regarding either the problem itself or the proposed updates)**
 16. List all other machien learning, deep learning, computer vision, natural language processing, pattern recognition or any related data science field project you have particiapted in, **especially if you think they're close to your problem statement**. 
 17. Mention all available online resources/papers you will collect during the survey.
-18. Each team member contribution. You should state only the contribution in the technical work, so writing the document for example shouldn't be included.
+18. Each team member contribution. You should state only the contribution in the technical work (such as thinking of the proposed updates, looking for the data, etc.), so writing the document for example shouldn't be included.
 
 ## Deliverables
 
@@ -40,7 +40,7 @@ The following are great hubs to search for a paper with code.
 
 ### 2. Problem Domain
 
-I highly recommend you to avoid any problem domain that works with videos unless you're sure the training time is feasible.
+I highly recommend you to avoid any problem domain that works with videos or very large datasets unless you're sure the training time is feasible.
 
 ### 3. Dataset
 
@@ -57,7 +57,6 @@ You need to ask your self the following questions:
 3. Can I train the model on other cloud service?
 
 If you have an access to credit card, then [this tutorial: 'Using Azure Free 200$ Credit for Deep Learning'](https://youtu.be/EFVU8EnibXw) might be beneficial to you.
-You can make use of the Google Cloud Credit.
 
 ## Selected Proposals
 
@@ -79,14 +78,14 @@ The following are selected proposals from past years, I highly recommend you to 
 
 I will review your proposal and check that it meets each individual specified requirement and whether **accept, accept with updates or reject it**.
 
-The proposal update phase will be used to **update the proposal incase of rejection or updates request**.
+The proposal update phase (the first week after the proposal submission) will be used to **update the proposal in case of rejection or updates request**.
 
 ### 2. How this phase is graded?
 
-* Each individual specified requirement has a grade.
-* Clear amount of effort done.
-* Overall proposal document quality.
-* The readability of the proposal.
+* Each individual specified **requirement** has a grade.
+* Clear amount of **effort** done.
+* Overall proposal document **quality**.
+* The **readability** of the proposal.
 
 ### 3. What is not acceptable in this phase?
 
