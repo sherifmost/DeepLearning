@@ -64,7 +64,7 @@ If you produce a plot like the following:
 
 ![Overfitting](Overfitting.jpeg)
 
-This means that your model is overfitting, you can solve this issue by adding regularization. Adding activation functions is not an option since this is a linear regression problem.
+This means that your model is overfitting, you can solve this issue by adding regularization. You can also first try training for more epochs as the performance **might** improve. Adding activation functions is **not** an option since this is a linear regression problem.
 
 ## 11. Is this some sort of overfitting?
 
