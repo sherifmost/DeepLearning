@@ -12,3 +12,4 @@
 
 * Solve [this notebook](lab4.ipynb) of the assignment and deliver a filled ipython notebook that shows the best output found in your experiments.
 * No report is required.
+* No experiments required (you are encouraged to experiment)
