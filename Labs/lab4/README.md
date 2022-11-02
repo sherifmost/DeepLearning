@@ -10,6 +10,5 @@
 
 ## 2 - Requirements
 
-* Solve [this notebook](lab4.ipynb) of the assignment and deliver a filled ipython notebook that shows the best output found in your experiments.
+* Solve [this notebook](lab4.ipynb) of the assignment and deliver a filled ipython notebook that shows the best output found in your experiments. **Check the hints commented in the cells to help guide you while filling in the code**.
 * No report is required.
-* No experiments required (you are encouraged to experiment)
