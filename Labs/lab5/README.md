@@ -1,4 +1,4 @@
-# Lab5: Visual Image Captioning
+# Lab5: Visual Image Caption Generation
 
 ![Visual Image Captioning](Image_Captioning.png)
 
