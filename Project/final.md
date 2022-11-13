@@ -110,6 +110,7 @@ The following are few templates you can use to write your own paper:
 The following is a selected list of previous terms publication-quality papers:
 
 1. [Artistic Style Transfer For Videos](assets/selected_pq_papers/style_transfer.pdf)
+2. [Deep Learning-based Floor Prediction Using Cell Network Information](assets/selected_pq_papers/floor_prediction.pdf)
 
 ## Notes
 
