@@ -27,5 +27,5 @@ To easily use the dataset on Google Colab, we will obtain it in the notebook fro
 ## 3 - Requirements
 
 * Solve [this notebook](lab5.ipynb) of the assignment and deliver a filled ipython notebook that shows the best output found in your experiments. **Check the hints in the notebook to help guide you while filling in the code**.
-* Download the notebook and upload it for submission. **Make sure you include the output of the cells, especially the predicted caption on a test image in the evaluation section at the end** 
+* Download the notebook and upload it for submission. **Make sure you include the output of each of the cells, especially the predicted caption on a test image in the evaluation section at the end. This is a clear indication that you filled the code correctly. Failing to include the outputs and the loss plots will lead to a deduction in the grades.** 
 * No report is required.
