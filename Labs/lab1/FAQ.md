@@ -1,6 +1,6 @@
-# Lab1 Frequently Asked Questions (FAQs)
+# Assignment 1 Frequently Asked Questions (FAQs)
 
-Those are the answer of the most frequently asked questions in lab1.
+Those are the answer of the most frequently asked questions in Assignment 1.
 
 ## 1. model.summary() fails
 
@@ -8,7 +8,7 @@ If you get the following error:
 
 ![model.summary()](model_summary_error.png)
 
-This means that you haven't specify the input shape in the dense layer. The dense layer accepts only the shape of the input, the number of data examples shouldn't be specified, so in case of lab1 the input shape will be specified as following
+This means that you haven't specify the input shape in the dense layer. The dense layer accepts only the shape of the input, the number of data examples shouldn't be specified, so in case of assignment 1 the input shape will be specified as following
 
 ```python
 input_shape=(X_tr.shape[1],)
