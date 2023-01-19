@@ -4,15 +4,15 @@ The final delivery of the project, you will need to finalize your work, make any
 
 ## The Presentation Requirements
 
-**One important note about this presentation, is that it has to cover all the project work, not only the work done after the second milestone.**
+**One important note about this presentation is that it has to cover all the project work, not only the work done after the second milestone.**
 
 1. Original model from literature (in figures and diagrams only).
 2. Proposed model architecture (in figures and diagrams only).
 3. Final model architecture (in figures and diagrams only), explain if proposed parts weren't feasible which made you adopt new changes.
 4. Graphs and plots that show your results.
-5. A **live** demo of your working model.
+5. A **live** demo of your working model. (more details in the next points)
 6. Conclusion and future work (including lessons learned and interesting findings).
-7. Each team member contribution. You should state only the contribution in the technical work, so (designing the presentation or the poster, creating the website, writing the document for example) shouldn't be included.
+7. Each team member contribution. You should state only the contribution in the technical work, so (designing the presentation or the poster, creating the website, writing the document for example) shouldn't be included. "We divided the work equally" is not accepted, have a clear division of work.
 
 ## Selected Presentations
 
@@ -24,7 +24,7 @@ The final delivery of the project, you will need to finalize your work, make any
 
 1. Presentation slides containing the requirements.
 2. A recorded video of your presentation, this will give you a chance to rehearse and also be a point of reference for your work.
-3. A recorded video of your model demo.
+3. A recorded video of your model demo. (part of the presentation video)
 4. A **live** presentation showing your work.
 5. A **live** demo of your working model.
 6. Project Code.
@@ -38,7 +38,7 @@ The final delivery of the project, you will need to finalize your work, make any
 The submitted code must satisfy the following requirements:
 
 1. Code files in a Python Notebook/Jupyter Notebook **if possible**. But, in all ways, a full working code must be submitted.
-2. A list of all dependencies and installation instructions to get the code fully working.
+2. A list of all dependencies and installation instructions to get the code fully working. (Readme.txt)
 3. Data files, provide permanent links for huge datasets or upload the dataset directly to the submission form if tiny (less than 100 MB).
 4. Your model weights, a permanent link if possible or upload it directly to the submission form if tiny (less than 1 GB).
 
@@ -50,7 +50,7 @@ For example, in the case of image classification, we need to see the input image
 
 Don't show us the model accuracy or the training result, this part should show us few examples on how this model could be used in real life practice.
 
-**Note**: You're also required to deliver a pre-recorded video of your model demo, this video **should match exactly** the live demo you will make during your presentation to ensure fairness, any mismatch will be considered a fraud and penalized accordingly.
+**Note**: You're also required to deliver a pre-recorded video of your model demo (as part of the presentation video), this video **should match exactly** the live demo you will make during your presentation to ensure fairness, any mismatch will be considered a fraud and penalized accordingly.
 
 ## The Project Poster
 
@@ -99,7 +99,7 @@ This website template is based on [the bare bootstrap](https://startbootstrap.co
 
 ## The Publication-Quality Paper (BONUS)
 
-You may submit a paper that illustrates all the work done on the project. This paper should follow the general rules and styles seen in published papers.
+You may submit a paper that illustrates all the work done on the project. This paper should follow the general rules and styles seen in published papers. **It should be a publication-quality paper to receive a bonus and not just a report of your work**.
 
 The following are few templates you can use to write your own paper:
 
@@ -117,9 +117,9 @@ The following is a selected list of previous terms publication-quality papers:
 1. The presentation should be about all the course project, not the progress during final delivery only.
 2. You are to continue your code/research work during this phase to finish all your proposed updates beside working on the other requirements.
 3. You have to make the presentation using the submitted slides, a penalty is applied otherwise.
-4. Your presentation will take only *nine minutes*, two of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within 7 minutes.
+4. Your presentation will take only *nine minutes*, two of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within **7 minutes**.
 5. **The recorded video of the presentation will be submitted days before your live presentation. Make sure not to get confused by this point.**
-6. The recorded video of the presentation should not exceed seven minutes and should be at least of five minutes.
+6. The recorded video of the presentation should not exceed **seven minutes** and should be at least of **five minutes**.
 7. The provided selected presentations, selected posters, and website might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
 8. For the live demo, We want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements nor instructions for it.
 9. Each of the bonus requirements stands alone, you can submit either of them and get a bonus grades for it.
