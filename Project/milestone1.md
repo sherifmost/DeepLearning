@@ -5,13 +5,9 @@ You are required to make a presentation containing the following.
 ## The Presentation Requirements
 
 1. A Summary of your proposal.
-
-  a. Explanation of the problem statement. Use graphics to explain the problem briefly.
-  
-  b. Summary of the related work and the selected one to expand on.
-  
-  c. Your proposed solution/model and difference from related work.
- 
+  - Explanation of the problem statement. Use graphics to explain the problem briefly.
+  - Summary of the related work and the selected one to expand on.
+  - Your proposed solution/model and difference from related work.
 2. Progress report on deploying the original model.
 3. Current progress on the proposed solution (extra work on the baseline).
 4. Initial Results (in the correct metrics and plots chose in the proposal).
