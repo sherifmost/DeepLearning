@@ -22,11 +22,11 @@ According to the provided term timeline.
 
 ## 3 - Project Proposal
 
-You are required to submit a quality-document containing detailed informations about the project you propose to make. More details about the requirements on [this document](proposal.md).
+You are required to submit a quality-document containing detailed information about the project you propose to make. More details about the requirements on [this document](proposal.md).
 
 ## 4 - Proposal Update
 
-After project proposal is reviewed by the instructors, you might be instructed to update any point of your proposal.
+After project proposal is reviewed by the instructors, you might be instructed to update any point of your proposal. Note that the proposal grade will **not be updated** when you update the proposal.
 
 ## 5 - Project Milestone 1
 
