@@ -120,6 +120,6 @@ The update phase is only to consider the points that we mention you need to **up
 
 No, the grade is based on the **initial proposal submission** so be sure to make as much effort in it as possible and deliver the best you can.
 
-### 9. Can I change some of the details mentioned in the prposal at a later stage in the project?
+### 9. Can I change some of the details mentioned in the proposal at a later stage in the project?
 
 Unless you are instructed to do so or there is a reasonable justification for this, we won't accept it. You should stick to what you propose and consider the feedback we send in the update phase.
