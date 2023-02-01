@@ -12,7 +12,7 @@ You can check the past project websites:
 
 You're required to submit the following:
 
-1. Project Proposal (25% of the grades)
+1. Project Proposal (25% of the project grades)
 2. Proposal Update.
 3. Project Milestone 1 (25% of the project grades)
 4. Project Milestone 2 (10% of the project grades)
