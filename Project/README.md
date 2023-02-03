@@ -30,7 +30,7 @@ After project proposal is reviewed by the instructors, you might be instructed t
 
 ## 5 - Project Milestone 1
 
-You are required to make a presentation that show your progress More details about the requirements on [this document](milestone1.md).
+You are required to make a presentation that show your progress. More details about the requirements on [this document](milestone1.md).
 
 ## 6 - Project Milestone 2
 
