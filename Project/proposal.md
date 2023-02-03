@@ -14,11 +14,11 @@ Perhaps the most important delivery since all your project work depends on it. Y
 8. A survey of available models and solutions for the proposed problem. This survey should include, details, figures, and plots to explain each model, reference paper for each model, public repository code link, information about frameworks used in the code, information about available weights/model zoo, information about training resources required for them **if available**, results of each model and comparison between them in a **table**, and any other important information.
 9. A detailed description of the model to be used from literature to build on. Also mention **why you will use this particular model**.
 10. The source code URL for the selected baseline model. It should be written in a recent framework, as Tensorflow 2.x or TF.Keras or PyTorch and in few files (20 code files or less). If there's no available source code, or the source code doesn't use the mentioned frameworks, **please jusitfy how will you approach your project without them**.
-11. The model weights or model zoo URL. If there're no model weights, **please jusitfy how will you approach your project without them**. Note that the model weights refer to the files storing the final/checkpoint weights of the model obtain after training, they help serve as a starting point to avoid long training times when training from scratch.
+11. The model weights or model zoo URL. If there're no model weights, **please jusitfy how will you approach your project without them**. Note that the model weights refer to the files storing the final/checkpoint weights of the model obtained after training, they help serve as a starting point to avoid long training times when training from scratch.
 12. The proposed updates to the literature model. Also mention **what benefit do you expect from this update and why you think it is a good idea to try it**, its ok if it is just a gut feeling based on your readings, but you need to justify why you want to make such an update.
-13. Write in details about how you will evaluate your results, what kind of **evaluation metric** you will use to compare your results, and what types of **plots/graphs** (show us in figures: histograms, line graphs, confusion matrices etc. depending on your problem) will be used to point out the comparison results.
+13. Write in details about how you will evaluate your results, what kind of **evaluation metric** you will use to compare your results, and what types of **plots/graphs** will be used to point out the comparison results (tell us what figures/plots we should expect. Examples include: histograms, line graphs, confusion matrices etc. depending on your problem).
 14. **Your graduation project (or thesis) brief problem statement (if you are working on it this semester), even if it is not the same as the proposed course problem statement.**
-15. **If your proposal is related to your graduation project (or thesis), point out the differences that will be made between this problem statement and your graduation project (thesis) problem statement (regarding either the problem itself or the proposed updates)**
+15. **If your proposal is related to your graduation project (or thesis), point out the differences that will be made between this problem statement and your graduation project (thesis) problem statement (regarding either the problem itself or the proposed updates/solutions)**
 16. List all other machine learning, deep learning, computer vision, natural language processing, pattern recognition or any related data science field project you have particiapted in, **especially if you think they're close to your problem statement**. 
 17. Mention all available online resources/papers you collected during making the proposal.
 18. Each team member contribution. You should state only the contribution in the technical work (such as thinking of the proposed updates, looking for the data, etc.), so writing the document for example shouldn't be included here. Statements like "we divided the work equally" are **not accepted**, have a clear and fair division of work.
@@ -40,7 +40,7 @@ The following are great hubs to search for a paper with code.
 
 ### 2. Problem Domain
 
-I highly recommend you to avoid any problem domain that works with videos or very large datasets unless you're sure the training time is feasible. Also, make sure you are comfortable with the problem and the models/solutions you found (don't select a problem if you think that the model is too complex to build on or the code is too complicated).   
+I highly recommend you avoid any problem domain that works with videos or very large datasets unless you're sure the training time is feasible. Also, make sure you are comfortable with the problem and the models/solutions you found (don't select a problem if you think that the model is too complex to build on or the code is too complicated to work with).   
 
 ### 3. Dataset
 
@@ -95,10 +95,10 @@ The following are some examples of unacceptable work in proposals:
 * Having sentences like "We achieved the state of the art results", which shows clearly that you didn't write this proposal specifically to us.
 * Some proposals assume that the reader is aware of all the world terminology, sentences like "We will use LR image" and I'm left to figure out what is LR.
 * Some proposals don't state clearly the basemodel or any model, sentences like "we will use sequence to sequence". How am I supposed to know what type of model you will use from the sequence to sequence family?
-* Missing a requirement or disregarding its any of its details without justification.
+* Missing a requirement or disregarding any of its details without justification.
 * Hastily compiling the document without caring about its **readability** and **clarity**.
 
-You need to be precise, discrete, and organized. Make sure to address us and show us your level of understanding in a clear way.
+You need to be precise, discrete, and organized. Make sure to address us and show us your level of understanding in a clear way. Make sure to cite all the references you use and **do not copy**, write in your own words to show us what you understand.
 
 ### 4. Can I use the same problem proposed in selected proposals or past project website?
 
