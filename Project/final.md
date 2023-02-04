@@ -8,9 +8,9 @@ The final delivery of the project, you will need to finalize your work, make any
 
 1. Original model from literature (in figures and diagrams only).
 2. Proposed model architecture (in figures and diagrams only).
-3. Final model architecture (in figures and diagrams only), explain if proposed parts weren't feasible which made you adopt new changes.
+3. Final model architecture (in figures and diagrams only), explain if originally proposed parts weren't feasible which made you adopt new changes.
 4. Graphs and plots that show your results.
-5. A **live** demo of your working model. (more details in the next points)
+5. A **live** demo of your working model. **(more details in the next points)**
 6. Conclusion and future work (including lessons learned and interesting findings).
 7. Each team member contribution. You should state only the contribution in the technical work, so (designing the presentation or the poster, creating the website, writing the document for example) shouldn't be included. "We divided the work equally" is not accepted, have a clear division of work.
 
@@ -24,9 +24,9 @@ The final delivery of the project, you will need to finalize your work, make any
 
 1. Presentation slides containing the requirements.
 2. A recorded video of your presentation, this will give you a chance to rehearse and also be a point of reference for your work.
-3. A recorded video of your model demo. (part of the presentation video)
+3. A recorded video of your model demo. (make it part of the presentation video)
 4. A **live** presentation showing your work.
-5. A **live** demo of your working model.
+5. A **live** demo of your working model (during the live presentation, if you think the demo will take too much time during the presentation, you can use a recorded video and explain what is happening in it in the live presentation).
 6. Project Code.
 7. A poster for your project (soft copy).
 8. Project Website.
@@ -44,20 +44,20 @@ The submitted code must satisfy the following requirements:
 
 ## The Project Demo
 
-It's required to deliver a live demo during your presentation, in this demo you are required to show us the model is practice, we need to see the model fed with clear examples and to see actual output.
+It's required to deliver a live demo during your presentation, in this demo you are required to show us the model in practice, we need to see the model fed with clear examples and to see actual output.
 
 For example, in the case of image classification, we need to see the input image, the output class and how confident the model is.
 
-Don't show us the model accuracy or the training result, this part should show us few examples on how this model could be used in real life practice.
+Don't show us the model accuracy or the training result, this part should show us few examples on how this model could be used in **real life practice**.
 
-**Note**: You're also required to deliver a pre-recorded video of your model demo (as part of the presentation video), this video **should match exactly** the live demo you will make during your presentation to ensure fairness, any mismatch will be considered a fraud and penalized accordingly.
+**Note**: You're also required to deliver a pre-recorded video of your model demo (as part of the presentation video), this video **should match exactly** the live demo you will make during your presentation to ensure fairness, any mismatch will be considered a fraud and penalized accordingly. In case your demo takes too long to run, you can use the recorded video in the live presentation (to speed up the process) and explain to us what is happening in the video.
 
 ## The Project Poster
 
 The project poster is a pdf document for a one-page summary of your project. It has no specific requirements but the following guidelines should help:
 
-1. Make sure to include the university logo.
-2. Focus more on graphs, figures and diagrams.
+1. Make sure to include the university logo, your names, and the project title.
+2. Focus more on graphs, figures and diagrams. **Avoid having too much text**.
 3. Simple is safe.
 
 You can use any simple tools like Microsoft Power Point or Google Slides. You can start from free templates available online such as found [here](https://www.genigraphics.com/templates) and [here](https://www.posterpresentations.com/free-poster-templates.html).
@@ -99,7 +99,7 @@ This website template is based on [the bare bootstrap](https://startbootstrap.co
 
 ## The Publication-Quality Paper (BONUS)
 
-You may submit a paper that illustrates all the work done on the project. This paper should follow the general rules and styles seen in published papers. **It should be a publication-quality paper to receive a bonus and not just a report of your work**.
+You may submit a paper that illustrates all the work done on the project. This paper should follow the general rules and styles seen in published papers. **It must be a publication-quality paper to receive a bonus grade and not just a report of your work**. The paper quality is decided on by the course instructor.
 
 The following are few templates you can use to write your own paper:
 
@@ -121,6 +121,6 @@ The following is a selected list of previous terms publication-quality papers:
 5. **The recorded video of the presentation will be submitted days before your live presentation. Make sure not to get confused by this point.**
 6. The recorded video of the presentation should not exceed **seven minutes** and should be at least of **five minutes**.
 7. The provided selected presentations, selected posters, and website might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
-8. For the live demo, We want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements nor instructions for it.
+8. For the live demo, we want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements nor instructions for it.
 9. Each of the bonus requirements stands alone, you can submit either of them and get a bonus grades for it.
 10. For more information about the Student Research Competition, reach to the course professor.
