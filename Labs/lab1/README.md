@@ -14,7 +14,7 @@
 
 * Keras is a high-level neural network API, written in Python and capable of  running on top of TensorFlow, CNTK, or Theano.
 * We will be concentrating on using Tensorflow.Keras on top of TensorFlow.
-* All the information needed to use Keras API can be found in [this documentation](https://www.tensorflow.org/tutorials/) (please refer to it to learn about different hyperparameters you can use too).
+* All the information needed to use Keras API can be found in [this documentation](https://www.tensorflow.org/tutorials/).
 
 ## 3 - Introduction to Colaboratory
 
