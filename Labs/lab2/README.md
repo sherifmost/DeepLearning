@@ -14,7 +14,7 @@ The MNIST is a dataset of handwritten digits, has a training set of 60,000 examp
 
 ![MNIST Dataset](MNIST.png)
 
-[This is](http://yann.lecun.com/exdb/mnist/) the original website of the dataset, also, you can have a look at [the dataset on the CSV format on kaggle](https://www.kaggle.com/oddrationale/mnist-in-csv), you can check the notebooks and ideas applied on it on Kaggle.
+You can have a look at [the dataset on the CSV format on kaggle](https://www.kaggle.com/oddrationale/mnist-in-csv), you can check the notebooks and ideas applied on it on Kaggle.
 
 Also, the dataset is [builtin in keras](https://keras.io/api/datasets/mnist/) and you can download & load it directly using one code line.
 
