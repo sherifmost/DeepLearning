@@ -20,5 +20,5 @@ Also, the dataset is [builtin in keras](https://keras.io/api/datasets/mnist/) an
 
 ## 3 - Requirements
 * In case the submission form contains questions you should answer, **please have a look at the questions first** and prepare the answers while working on the lab; so as not to get stuck while submitting your work.
-* Solve [this notebook](lab2.ipynb) of the assignment and deliver a filled ipython notebook that **shows the best output found in your experiments**.
+* Solve [this notebook](lab2.ipynb) of the assignment and deliver a filled ipython notebook that **shows the best output found in your experiments** (it is enough to test 2 or 3 variations for each parameter not to take too much time training).
 * You should deliver a PDF report that has **tables and plots** summarizing all your work and experiments, make sure to indicate any overfitting/underfitting. **The report should also include your observations from the machine learning interpretability part at the end**.
