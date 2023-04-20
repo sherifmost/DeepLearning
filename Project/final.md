@@ -26,7 +26,7 @@ The final delivery of the project, you will need to finalize your work, make any
 2. A recorded video of your presentation, this will give you a chance to rehearse and also be a point of reference for your work.
 3. A recorded video of your model demo. (make it part of the presentation video)
 4. A **live** presentation showing your work.
-5. A **live** demo of your working model (part of the live presentation, if you think the demo will take too much time in the presentation, you can use a recorded video and explain what is happening in it in the live presentation).
+5. A **live** demo of your working model (part of the live presentation, if you think the demo will take too much time in the presentation, you can use a recorded video and explain what is happening in it to us in the live presentation).
 6. Project Code.
 7. A poster for your project (soft copy).
 8. Project Website.
