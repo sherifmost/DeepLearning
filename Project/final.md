@@ -12,7 +12,7 @@ The final delivery of the project, you will need to finalize your work, make any
 4. Graphs and plots that show your results.
 5. A **live** demo of your working model. **(more details in the next points)**
 6. Conclusion and future work (including lessons learned and interesting findings).
-7. Each team member contribution. You should state only the contribution in the technical work, so (designing the presentation or the poster, creating the website, writing the document for example) shouldn't be included. "We divided the work equally" is not accepted, have a clear division of work.
+7. Each team member contribution. You should state only the contribution in the technical work, so (designing the presentation or the poster, creating the website, writing the document for example, shouldn't be included). "We divided the work equally" is not accepted, have a clear division of work.
 
 ## Selected Presentations
 
