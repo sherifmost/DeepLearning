@@ -121,5 +121,5 @@ The following is a selected list of previous terms publication-quality papers:
 6. The recorded video of the presentation should not exceed **seven minutes** and should be at least of **five minutes**.
 7. The provided selected presentations, selected posters, and website might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
 8. For the live demo, we want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements nor instructions for it.
-9. Each of the bonus requirements stands alone, you can submit either of them and get a bonus grades for it.
+9. Each of the bonus requirements stands alone, you can submit either of them and get a bonus grades for it. **Bonus grades apply to the final presentation grades only and won't have an effect if you already got the full grade in it (i.e., you can get a maximum of 100% in the final presentation including the bonus).**
 10. For more information about the Student Research Competition, reach to the course professor.
