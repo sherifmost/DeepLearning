@@ -30,8 +30,6 @@ The final delivery of the project, you will need to finalize your work, make any
 6. Project Code.
 7. A poster for your project (soft copy).
 8. Project Website.
-9. **(BONUS)**: Publication-Quality paper.
-10. **(BONUS)**: Enroll in the Student Research Competition of one of the ACM SIGs after consultation with the course instructor about the quality of the work and its relevance to a specific SIG.
 
 ## The Project Code
 
@@ -97,20 +95,6 @@ You can have a look at [the rendered webpage of the dummy project](https://raw.g
 
 This website template is based on [the bare bootstrap](https://startbootstrap.com/template/bare) website template.
 
-## The Publication-Quality Paper (BONUS)
-
-You may submit a paper that illustrates all the work done on the project. This paper should follow the general rules and styles seen in published papers. **It must be a publication-quality paper to receive a bonus grade and not just a report of your work**. The paper quality is decided on by the course instructor.
-
-The following are few templates you can use to write your own paper:
-
-1. [Style and Template for Preprints (arXiv, bio-arXiv)](https://www.overleaf.com/latex/templates/style-and-template-for-preprints-arxiv-bio-arxiv/pkzcrhzcdxmc)
-2. [Sample ACM CCS](https://www.overleaf.com/latex/templates/sample-acm-ccs/hqrzvbjgvfvz)
-3. [IEEE Conference LaTeX Template](https://www.overleaf.com/latex/templates/ieee-conference-latex-template/hkfsmxcvymyk)
-
-The following is a selected list of previous terms publication-quality papers:
-
-1. [Deep Learning-based Floor Prediction Using Cell Network Information](assets/selected_pq_papers/floor_prediction.pdf)
-
 ## Notes
 
 1. The presentation should be about all the course project, not the progress during final delivery only.
@@ -121,5 +105,3 @@ The following is a selected list of previous terms publication-quality papers:
 6. The recorded video of the presentation should not exceed **seven minutes** and should be at least of **five minutes**.
 7. The provided selected presentations, selected posters, and website might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
 8. For the live demo, we want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements nor instructions for it.
-9. Each of the bonus requirements stands alone, you can submit either of them and get a bonus grades for it. **Bonus grades apply to the final presentation grades only and won't have an effect if you already got the full grade in it (i.e., you can get a maximum of 100% in the final presentation including the bonus).**
-10. For more information about the Student Research Competition, reach to the course professor.
