@@ -24,8 +24,8 @@
 ## 4 - Requirements
 
 * **IMPORTANT NOTE:** Please have a look at the report template (included with the assignment instructions) first to keep in mind what questions and experiments are required. **Make sure you read the instructions in the report template carefully before going through the ipython notebooks**. Having a look at the report template first helps you avoid getting stuck when filling out the report.
-* Solve [part 1](lab1_part1.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part.
-* Solve [part 2](lab1_part2.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part.
+* Solve [part 1](lab1_part1.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part. **Do not clear the best output from the cells**.
+* Solve [part 2](lab1_part2.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part. **Do not clear the best output from the cells**.
 * You should fill the provided report template based on all the experiments and work you made and deliver it with the notebooks. **Make sure to answer all the questions and fill in all the TODOs in the report to avoid losing grades.**
 
 ## 5 - FAQ
