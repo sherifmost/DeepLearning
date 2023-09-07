@@ -126,7 +126,7 @@ Unless you are instructed to do so or there is a reasonable justification for th
 
 ### 10. What can be considered a major update when selecting a problem proposed in a past project?
 
-This includes for example choosing a different baseline model, proposing new updates rather than those suggested in the past project, and addressing a different issue. The same goes for selecting a problem you already tackled in a machine learning project or are tackling in the graduation project (building in the course project on your work in another project or vice versa is **not accepted**).
+This means **at least** choosing a different baseline model, proposing new updates rather than those suggested in the past project, and addressing a different issue. The same goes for selecting a problem you already tackled in a machine learning project or are tackling in the graduation project (building in the course project on your work in another project or vice versa is **not accepted**).
 
 ### 11. Is there a specific structure required for the proposal document?
 
