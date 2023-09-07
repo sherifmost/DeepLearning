@@ -23,10 +23,10 @@
 
 ## 4 - Requirements
 
-* In case the submission form contains questions you should answer, **please have a look at the form questions first** and prepare the answers while working on the assignment; so as not to get stuck while submitting your work.
+* **IMPORTANT NOTE:** Please have a look at the report template (included with the assignment instructions) first to keep in mind what questions and experiments are required. **Make sure you read the instructions in the report template carefully before going through the ipython notebooks**. Having a look at the report template first helps you avoid getting stuck when filling out the report.
 * Solve [part 1](lab1_part1.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part.
 * Solve [part 2](lab1_part2.ipynb) of the assignment and **deliver a filled ipython notebook that shows the best output found in your experiments** in this part.
-* You should deliver a report including **tables and plots** explaining all your work and your experiments, make sure to indicate any overfitting/underfitting.
+* You should fill the provided report template based on all the experiments and work you made and deliver it with the notebooks. **Make sure to answer all the questions and fill in all the TODOs in the report to avoid losing grades.**
 
 ## 5 - FAQ
 
