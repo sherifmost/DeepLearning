@@ -19,6 +19,6 @@ You can have a look at [the dataset on the CSV format on kaggle](https://www.kag
 Also, the dataset is [builtin in keras](https://keras.io/api/datasets/mnist/) and you can download & load it directly using one code line.
 
 ## 3 - Requirements
-* In case the submission form contains questions you should answer, **please have a look at the questions first** and prepare the answers while working on the assignment; so as not to get stuck while submitting your work.
-* Solve [this notebook](lab2.ipynb) of the assignment and deliver a filled ipython notebook that **shows the best output found in your experiments** (it is enough to test 2 or 3 variations for each parameter not to take too much time training).
-* You should deliver a PDF report that has **tables and plots** summarizing all your work and experiments, make sure to indicate any overfitting/underfitting. **The report should also include your observations from the machine learning interpretability part at the end**.
+* **IMPORTANT NOTE:** Please have a look at the report template (included with the assignment instructions) first to keep in mind what questions and experiments are required. **Make sure you read the instructions in the report template carefully before going through the ipython notebook**. Having a look at the report template first helps you avoid getting stuck when filling out the report.
+* Solve [this notebook](lab2.ipynb) of the assignment and deliver a filled ipython notebook that **shows the best output found in your experiments**. **Do not clear the best output from the cells**.
+* You should fill the provided report template based on all the experiments and work you made and deliver it with the notebooks. **Make sure to answer all the questions and fill in all the TODOs in the report to avoid losing grades.**
