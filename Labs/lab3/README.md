@@ -24,6 +24,6 @@ The test set has 150 examples.
 You can find [the dataset on Kaggle](https://www.kaggle.com/iarunava/happy-house-dataset), also you can fine many [code notebooks](https://www.kaggle.com/iarunava/happy-house-dataset/code) for the dataset on Kaggle.
 
 ## 3 - Requirements
-* **Please have a look at the questions in the submission form first** and prepare the answers while working on the assignment; so as not to get stuck while submitting your work.
-* Solve [this notebook](Lab3.ipynb) of the assignment and deliver a filled ipython notebook that shows **the best output found in your experiments in this part**.
-* You should deliver a PDF report that has **tables and plots** summarize all your work and experiments, make sure to indicate any overfitting/underfitting in the plots you include.
+* **IMPORTANT NOTE**: Please have a look at the report template (included with the assignment instructions) first to keep in mind what questions and experiments are required. **Make sure you read the instructions in the report template carefully before going through the ipython notebook**. Having a look at the report template first helps you avoid getting stuck when filling out the report.
+* Solve [this notebook](Lab3.ipynb) of the assignment and deliver a filled ipython notebook that **shows the best output found in your experiments in this part**. **Do not clear the best output from the cells.**
+* You should fill the provided report template based on all the experiments and work you made and deliver it as a PDF with the notebook. **Make sure to answer all the questions and fill in all the TODOs in the report to avoid losing grades.**
