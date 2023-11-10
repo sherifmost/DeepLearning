@@ -1,6 +1,6 @@
 # Project Final Delivery
 
-The final delivery of the project, you will need to finalize your work, make any necessary updates on your code/research and present **all** the work done for the project, at this phase you're required to submit several deliverables and make a presentation that has the following requirements.
+For the final delivery of the project, you will need to finalize your work, make any necessary updates on your code/research, and present **all** the work done for the project, at this phase you're required to submit several deliverables and make a presentation that has the following requirements.
 
 ## The Presentation Requirements
 
@@ -12,7 +12,7 @@ The final delivery of the project, you will need to finalize your work, make any
 4. Graphs and plots that show your results.
 5. A **live** demo of your working model. **(more details in the next points)**
 6. Conclusion and future work (including lessons learned and interesting findings).
-7. Each team member contribution. You should state only the contribution in the technical work, so (designing the presentation or the poster, creating the website, writing the document for example, shouldn't be included). "We divided the work equally" is not accepted, have a clear division of work.
+7. Each team member's contribution. You should state only the contribution to the technical work, so (designing the presentation or the poster, creating the website, writing the document for example, shouldn't be included). "We divided the work equally" is not accepted; have a clear division of work.
 
 ## Selected Presentations
 
@@ -23,7 +23,7 @@ The final delivery of the project, you will need to finalize your work, make any
 ## Deliverables
 
 1. Presentation slides containing the requirements.
-2. A recorded video of your presentation, this will give you a chance to rehearse and also be a point of reference for your work.
+2. A recorded video of your presentation; this will give you a chance to rehearse and also be a point of reference for your work.
 3. A recorded video of your model demo. (make it part of the presentation video)
 4. A **live** presentation showing your work.
 5. A **live** demo of your working model (part of the live presentation, if you think the demo will take too much time in the presentation, you can use a recorded video and explain what is happening in it to us in the live presentation).
@@ -42,23 +42,23 @@ The submitted code must satisfy the following requirements:
 
 ## The Project Demo
 
-It's required to deliver a live demo during your presentation, in this demo you are required to show us the model in practice, we need to see the model fed with clear examples and to see actual output.
+It's required to deliver a live demo during your presentation, in this demo you are required to show us the model in practice, we need to see the model fed with clear examples and to see the actual output.
 
-For example, in the case of image classification, we need to see the input image, the output class and how confident the model is.
+For example, in the case of image classification, we need to see the input image, the output class, and how confident the model is.
 
-Don't show us the model accuracy or the training result, this part should show us few examples on how this model could be used in **real life practice**.
+Don't show us the model accuracy or the training result, this part should show us a few examples of how this model could be used in **real-life practice**.
 
-**Note**: You're also required to deliver a pre-recorded video of your model demo (as part of the presentation video), this video **should match exactly** the live demo you will make during your presentation to ensure fairness, any mismatch will be considered a fraud and penalized accordingly. In case your demo takes too long to run, you can use the recorded video in the live presentation (to speed up the process) and explain to us what is happening in the video.
+**Note**: You're also required to deliver a pre-recorded video of your model demo (as part of the presentation video), this video **should match exactly** the live demo you will make during your presentation to ensure fairness, any mismatch will be considered a fraud and penalized accordingly. In case your demo takes too long to run, you can use the recorded video in the live presentation (to speed up the process) but you must explain to us what is happening in the video.
 
 ## The Project Poster
 
 The project poster is a pdf document for a one-page summary of your project. It has no specific requirements but the following guidelines should help:
 
 1. Make sure to include the university logo, your names, and the project title.
-2. Focus more on graphs, figures and diagrams. **Avoid having too much text**.
-3. Simple is safe.
+2. Focus on graphs, figures, and diagrams. **Avoid having too much or too little text; balance between text and visuals**.
+3. **Simple is safe**.
 
-You can use any simple tools like Microsoft Power Point or Google Slides. You can start from free templates available online such as found [here](https://www.genigraphics.com/templates) and [here](https://www.posterpresentations.com/free-poster-templates.html).
+You can use any simple tools like Microsoft PowerPoint or Google Slides. You can start with free templates available online such as those found [here](https://www.genigraphics.com/templates) and [here](https://www.posterpresentations.com/free-poster-templates.html).
 
 The following is a list of posters from previous terms, just follow the general style, nothing specific nor fancy is required.
 
@@ -71,7 +71,7 @@ The following is a list of posters from previous terms, just follow the general 
 
 ## The Project Website
 
-You are required to create a website page for your project, I will use this page to create a website to present all your projects at one place, for better understanding, you can have a look at the past project websites:
+You are required to create a website page for your project, I will use this page to create a website to present all your projects in one place, for better understanding, you can have a look at the past project websites:
 
 * [AUC - CS 4606: Practical Machine Deep Learning - Spring 2022](https://raw.githack.com/sherifmost/DeepLearning/master/Project/assets/auc_spring2022_website/home.html)
 
@@ -87,21 +87,21 @@ website-template\vendor
 
 Please download the whole website-template folder, make your changes then submit the team-specific folder with its exact folder hierarchy.  You're to make modifications **only** inside the **team-specific** folder, **never** make any changes out of it.
 
-You will find inside the index.html a **whole template for a dummy project** I created. Just modify the content of the blocks to reflect your project details, please don't try to modify the styles and keep everything homogeneous. I've almost made an example of everything you might need inside the template, if you do this correctly, the website shouldn't take ten minutes to get done.
+You will find inside the index.html a **whole template for a dummy project** I created. Just modify the content of the blocks to reflect your project details, please don't try to modify the styles and keep everything homogeneous. I've made an example of almost everything you might need inside the template, if you do this correctly, the website shouldn't take ten minutes to be done.
 
-You can have a look at [the rendered webpage of the dummy project](https://raw.githack.com/KhaledElTahan/DeepLearning/master/Project/website-template/team-specific/index.html) for better understading.
+You can have a look at [the rendered webpage of the dummy project](https://raw.githack.com/KhaledElTahan/DeepLearning/master/Project/website-template/team-specific/index.html) for a better understanding.
 
-**The provided sections in my dummy project are the requirements of the website**, please make any suitable updates you need based on your project specifics, for example if you're using reinforcement learning then you may change the dataset section to enivornment section.
+**The provided sections in my dummy project are the requirements of the website**, please make any suitable updates you need based on your project specifics, for example, if you're using reinforcement learning then you may change the dataset section to be environment section.
 
 This website template is based on [the bare bootstrap](https://startbootstrap.com/template/bare) website template.
 
 ## Notes
 
 1. The presentation should be about all the course project, not the progress during final delivery only.
-2. You are to continue your code/research work during this phase to finish all your proposed updates beside working on the other requirements.
+2. You are to continue your code/research work during this phase to finish all your proposed updates besides working on the other requirements.
 3. You have to make the presentation using the submitted slides, a penalty is applied otherwise.
-4. Your presentation will take only *nine minutes*, two of which are reserved for instructors, and your colleagues questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within **7 minutes**.
+4. Your presentation will take only *nine minutes*, two of which are reserved for instructors, and your colleagues' questions/feedback. So, you need to make sure your presentation doesn't exceed *seven minutes*. Practice the presentation and make sure it fits within **7 minutes**.
 5. **The recorded video of the presentation will be submitted days before your live presentation. Make sure not to get confused by this point.**
-6. The recorded video of the presentation should not exceed **seven minutes** and should be at least of **five minutes**.
+6. The recorded video of the presentation should not exceed **seven minutes** and should be at least **five minutes**.
 7. The provided selected presentations, selected posters, and website might have been made under different requirements, just because any of them doesn't meet any of our requirements doesn't give you the ability to do the same.
-8. For the live demo, we want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements nor instructions for it.
+8. For the live demo, we want to see a running application of your model with good illustrative examples or use cases. However, you decide which use case you will present to us and how to do it, no specific requirements or instructions for it.
