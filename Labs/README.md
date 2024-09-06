@@ -21,4 +21,4 @@ Use the following links to navigate through the labs:
 * [Lab4: Music Generation with RNNs](lab4/README.md)
 * [Lab5: Visual Image Caption Generation](lab5/README.md)
 * [Lab6: Cartpole - Reinforcement Learning](lab6/README.md)
-* [Lab7: Generative Adversarial Networks](lab7/README.md)
+* [Lab7: Transformer-based Sentiment Analysis](lab7/README.md)
