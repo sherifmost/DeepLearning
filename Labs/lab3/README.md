@@ -1,4 +1,4 @@
-# Assignment 3: Convolutional Neural Network Use Cases
+# Assignment 2: Convolutional Neural Network Use Cases
 
 ![CNN Architectures](cnn_architectures.png)
 
