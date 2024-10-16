@@ -1,4 +1,4 @@
-# Assignment4: Visual Image Caption Generation
+# Assignment3: Visual Image Caption Generation
 
 ![Visual Image Captioning](Image_Captioning.png)
 
