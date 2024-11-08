@@ -1,6 +1,6 @@
 # Assignment4: Transformer-based Sentiment Analysis
 
-![Visual Image Captioning](cover.png)
+![Visual Image Captioning](Cover.png)
 
 ## 1 - Objectives
 
